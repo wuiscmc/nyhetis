@@ -1,0 +1,32 @@
+defaults: &defaults
+  
+  database: 
+    host: localhost
+    port: 1111
+    user: carlos
+    password: 1234
+
+  server:
+      host: localhost
+      port: 9292
+  
+  websources: 
+    - 'http://www.ujaen.es'
+    - 'http://www.diariojaen.es'
+    - 'http://www.vivajaen.es'
+
+development: 
+  <<: *defaults
+
+
+integration:
+  <<: *defaults
+  newspaper_mock:
+    host: localhost
+    port: 7541
+
+  websources: 
+    - 'http://localhost:7541'
+
+production: 
+  <<: *defaults
