@@ -20,6 +20,9 @@ class NewsStrategyFactory
 		
 	end
 
+	def self.find_all
+		New::AbstractNew.find_all
+	end
 
 
 end

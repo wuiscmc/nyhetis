@@ -1,4 +1,10 @@
-# require 'sinatra/base'
-require './lib/endpoints/dossier_endpoint'
+require "bundler/setup"
+Bundler.require(:default)
+#Encoding.default_internal = 'UTF-8' 
 
-# map('/api/v1') { run DossierEndpoint }
+require 'psych'
+env = ENV["RACK_ENV"] || "development"
+CONFIG = Psych.load_file("config/dossier.yml")[env].freeze
+
+require './db/redis_handler'
+require './lib/endpoints/dossier_endpoint'

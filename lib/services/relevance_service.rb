@@ -5,7 +5,7 @@ class RelevanceService
 
 	def analyze_relevance(new)
     words = BagOfWords.retrieve_words
-    relevance_calculator = RelevanceCalculator.new(words: words, text: new.text)
+    relevance_calculator = RelevanceCalculator.new(words: words, text:"#{new.heading} #{new.text}")
     relevance_calculator.calculate_relevance()
 	end
 

@@ -1,26 +1,38 @@
+require_relative './normalizer'
+require 'psych'
+
 class BagOfWords
+
   def self.retrieve_words
     Word.all
   end
 
-  class Word
+  class Word 
 
     attr_accessor :text
-
-    def self.all 
-      [Word.new(text: "Universidad")]
-    end
+    REDIS_PREFIX = 'bagwords:words'
 
     def initialize(params = {})
-      @text = params[:text]
+      @text = normalize(params[:text])
+    end
+    
+    def self.all 
+      redis.smembers(REDIS_PREFIX).map{|w| Word.new(text: w)}
     end
 
-    def in?(text)
-      text.include?(@text)
+
+    def in?(string)
+      normalize(string).include?(@text)
     end
 
     def to_s
       @text
+    end
+
+    private 
+
+    def normalize(string)
+      Normalizer.process(string)
     end
 
   end

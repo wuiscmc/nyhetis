@@ -6,7 +6,7 @@ describe NewsController do
 	
 	describe "#analyze_content" do 
 		
-		context "new is relevant" do 
+		context "when the new is relevant" do 
 			let(:content) {{url: "wwww.diariojaen.es", content: "universidad de jaen"}}
 			
 			it "saves the analyzed new in the history" do 

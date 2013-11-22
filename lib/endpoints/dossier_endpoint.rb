@@ -3,15 +3,19 @@ require_relative '../crawler_resque'
 
 class DossierEndpoint < Sinatra::Base
 
-  get '/search' do
-      puts CONFIG["websources"].first
-#      CrawlerResque.start(CONFIG["websources"].first)
-      "OK"
+  def initialize(*args)
+    super(args)
+    @news_controller = NewsController.new
   end
 
-  get '/eat/:food' do
-      
-      "Put #{params['food']} in fridge to eat later."
+
+  get '/search' do
+    CrawlerResque.start(CONFIG["websources"].first)
+  end
+
+  get '/news' do
+      news = @news_controller.find_all_news
+      news.to_json
   end
 
 end

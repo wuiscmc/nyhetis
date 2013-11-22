@@ -7,6 +7,7 @@ class CrawlerProcessJob
   def self.perform(content)
   	@news_controller = NewsController.new()
     crawled_data = CrawledData.new(content)
+    puts crawled_data.url
   	@news_controller.analyze_content(crawled_data)
   end
 

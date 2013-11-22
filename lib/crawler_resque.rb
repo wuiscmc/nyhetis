@@ -12,6 +12,6 @@ class CrawlerResque
     ) 
 
     cobweb.start(url) 
-
+    true
   end
 end

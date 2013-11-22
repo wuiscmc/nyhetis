@@ -1,6 +1,7 @@
 defaults: &defaults
   
   database: 
+    namespace: 'nyhetis:db'
     host: localhost
     port: 1111
     user: carlos
@@ -11,13 +12,12 @@ defaults: &defaults
       port: 9292
   
   websources: 
-    - 'http://www.ujaen.es'
-    - 'http://www.diariojaen.es'
-    - 'http://www.vivajaen.es'
+#    - 'http://www.ujaen.es'
+      - 'http://www.diariojaen.es'
+#    - 'http://www.vivajaen.es'
 
 development: 
   <<: *defaults
-
 
 integration:
   <<: *defaults

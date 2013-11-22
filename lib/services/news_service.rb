@@ -10,11 +10,20 @@ class NewsService
 		if concrete_new.valid?			
 			concrete_new.relevance = @relevance_service.analyze_relevance(concrete_new)
 		end
+
+		if concrete_new.relevant?
+			concrete_new.save
+		end
+
 		concrete_new
 	end
 
 	def persist(new)
 		new.save
+	end
+
+	def find_all_news
+		NewsStrategyFactory.find_all
 	end
 
 end

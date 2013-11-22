@@ -17,4 +17,8 @@ class NewsController
 		@news_service.persist(new)
 	end
 
+	def find_all_news()
+		@news_service.find_all_news()
+	end
+
 end
