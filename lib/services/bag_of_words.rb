@@ -22,7 +22,7 @@ class BagOfWords
 
 
     def in?(string)
-      normalize(string).include?(@text)
+      !(normalize(string) =~ /\b#{@text}\b/).nil?
     end
 
     def to_s

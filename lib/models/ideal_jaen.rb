@@ -9,15 +9,18 @@ module New
 		end
 
 		def self.url
-			/^(((http:\/\/)?))((www\.)?)(idealjaen\.es(.*))$/
+			/^(((http:\/\/)?))((www\.)?)(ideal\.es(.*))$/
 		end
 	
 		private
 
 		def parse_content
 			page = Nokogiri::HTML(@body)
-			@heading = page.css(".zonadecontenidos").css(".art_head").css('h1.headline').map(&:text)*" "
-			@text = page.css(".zonadecontenidos").css('.articulo').css(".text").css("p").map(&:text)*" "
+			heading = page.css(".zonadecontenidos h1.headline").text
+			content = page.css(".zonadecontenidos .articulo .text").text
+			return false if heading.empty? && content.empty?
+			@heading = normalize(heading.gsub("\n","").strip)
+			@text = normalize(content.gsub("\n","").strip)
 		end
 
 	end

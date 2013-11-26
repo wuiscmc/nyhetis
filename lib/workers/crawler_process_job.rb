@@ -17,7 +17,7 @@ class CrawlerProcessJob
   	attr_accessor 	:base_url, :response_time, :url, :status_code,
 					:mime_type, :character_set, :length, :text_content, :body,
 					:location, :headers, :links, :internal_urls, :redis_options,
-					:source_id, :crawl_id
+					:source_id, :crawl_id, :error, :redirect_through
 
 	def initialize(params = {})
 		params.each do |name, value|

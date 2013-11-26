@@ -8,6 +8,9 @@ class CrawlerResque
     cobweb = Cobweb.new(
       :processing_queue => "CrawlerProcessJob",  
       :crawl_finished_queue => "CrawlerFinishedJob", 
+      :valid_mime_types => ["text/html"],
+      #:first_page_redirect_internal => true,
+      :direct_call_process_job => true,
       :internal_urls => ["#{url}/*"]
     ) 
 

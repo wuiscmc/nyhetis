@@ -48,7 +48,13 @@ module New
 			!redis.get("#{REDIS_PREFIX}:#{id}:url").nil?
 		end
 
+		def dupe?
+			md5 = Digest::MD5.hexdigest(@url.split('?')[0])
+			redis.sismember("#{REDIS_PREFIX}:all", md5)
+		end
+
 		def save
+			return false if dupe?
 			redis.multi do 
 				redis.sadd("#{REDIS_PREFIX}:all", id)
 				redis.set("#{REDIS_PREFIX}:#{id}:url", @url)

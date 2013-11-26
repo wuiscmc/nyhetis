@@ -14,15 +14,18 @@ class Normalizer
     .gsub('Ä','A').gsub('Ë','E').gsub('Ï','I').gsub('Ö','O').gsub('Ü','U')
     .gsub('ä','a').gsub('ë','e').gsub('ï','i').gsub('ö','o').gsub('ü','u')
     .gsub('À','A').gsub('È','E').gsub('Ì','I').gsub('Ò','O').gsub('Ù','U')
-    .gsub('ñ','[n]').gsub('ç','[c]').gsub('Ñ','[N]').gsub('Ç','[C]')
+    .gsub('ñ','n').gsub('ç','[c]').gsub('Ñ','N').gsub('Ç','C')
     .gsub('å','a').gsub('Å','A').downcase
     .gsub(/[^\w\.,?]/,' ').strip.squeeze(' ')
   end
 
   def self.news_process(string)
+    old_string = string
     return string if string.empty?
+    string = string.gsub("\n","").gsub("\t","").gsub("\"","").squeeze(" ").strip
     ec = Encoding::Converter.new("utf-8", "iso-8859-1")
-    ec.convert(string).dump
+
+    string = ec.convert(string).dump
     .gsub('\xC3\x80',"A").gsub('\xC3\x81',"A").gsub('\xC3\x82',"A").gsub('\xC3\x83',"A").gsub('\xC3\x84',"A").gsub('\xC3\x85',"A")
     .gsub('\xC3\x88','E').gsub('\xC3\x89','E').gsub('\xC3\x8A','E').gsub('\xC3\x8B','E')
     .gsub('\xC3\x8C','I').gsub('\xC3\x8D','I').gsub('\xC3\x8E','I').gsub('\xC3\x8F','I')
@@ -40,7 +43,8 @@ class Normalizer
     .gsub('\xE2\x80\x99','´').gsub('\xE2\x80\x98','`')
     .gsub('\xC3\xA7','c').gsub('\xC3\x87','C')
     .gsub('\xC2\xBA','º')
-    .gsub('\xC2\xA0','')
+    
+    string = string.gsub('\xC2\xA0','').gsub('\\xC2','')
     .gsub('\xC0',"A").gsub('\xC1',"A").gsub('\xC2',"A").gsub('\xC3',"A").gsub('\xC4',"A").gsub('\xC5',"A")
     .gsub('\xC8','E').gsub('\xC9','E').gsub('\xCA','E').gsub('\xCB','E')
     .gsub('\xD2',"O").gsub('\xD3',"O").gsub('\xD4',"O").gsub('\xD5',"O").gsub('\xD6',"O")
@@ -54,7 +58,8 @@ class Normalizer
     .gsub('\xFD',"y").gsub('\xFF',"y")
     .gsub('\xD1','N').gsub('\xF1','n')
     .gsub('\xE7','c').gsub('\xC7','C')
-    .downcase.to_ascii
+
+    string.downcase.to_ascii.gsub("\"","").gsub("\\","")
   end
 
 

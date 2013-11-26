@@ -15,8 +15,13 @@ module New
 
 		def parse_content
 			page = Nokogiri::HTML(@body)
-			@heading = normalize(page.css(".contentheading").map(&:text)*" ")
-			@text = normalize(page.css(".article-content").css('p').map(&:text)*" ")
+      return false unless page.css(".pagination").text.empty?
+      heading = page.css(".contentheading").text
+      content = page.css(".article-content p").text
+      return false if heading.empty? || content.empty?
+      heading = heading.gsub("\n","").strip
+			@heading = normalize(heading)
+			@text = normalize(content)
 		end
 
 	end
