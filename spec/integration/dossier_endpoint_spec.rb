@@ -3,11 +3,10 @@ require 'psych'
 require 'typhoeus'
 require 'spec_helper'
 
-describe DossierEndpoint do 
+describe DossierEndpoint, integration: true do 
   
   before do 
     @config = Psych.load_file("config/dossier.yml")["integration"].freeze
-    
   end
 
   context "GET /api/v1/news" do

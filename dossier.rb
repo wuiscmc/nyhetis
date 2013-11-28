@@ -6,5 +6,5 @@ require 'psych'
 env = ENV["RACK_ENV"] || "development"
 CONFIG = Psych.load_file("config/dossier.yml")[env].freeze
 
-require './db/redis_handler'
-require './lib/endpoints/dossier_endpoint'
+require_relative 'db/redis_handler'
+require_relative 'lib/api/dossier_endpoint'

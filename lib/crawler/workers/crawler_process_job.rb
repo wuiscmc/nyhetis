@@ -1,4 +1,4 @@
-require_relative '../news_controller'
+require_relative '../../news/news_controller'
 
 class CrawlerProcessJob
   

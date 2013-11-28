@@ -1,5 +1,5 @@
-require_relative './normalizer'
 require 'psych'
+require_relative '../../util/normalizer'
 
 class BagOfWords
 

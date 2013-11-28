@@ -1,8 +1,8 @@
-require_relative '../models/abstract_new'
+require_relative 'abstract_new'
 
 class NewsStrategyFactory
 
-	def self.find_strategy(content)
+	def self.build_new(content)
 		attributes = { body: content.body, url: content.url }
 		case content.url
 		when New::DiarioJaen.url
@@ -19,10 +19,5 @@ class NewsStrategyFactory
 		end
 		
 	end
-
-	def self.find_all
-		New::AbstractNew.find_all
-	end
-
 
 end

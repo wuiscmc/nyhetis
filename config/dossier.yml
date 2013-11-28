@@ -12,7 +12,7 @@ defaults: &defaults
       port: 9292
   
   websources: 
-      #- 'http://www.ideal.es/jaen'
+      - 'http://www.ideal.es/jaen'
       #- 'http://www.diariojaen.es'
       - 'http://andaluciainformacion.es/jaen'
 
