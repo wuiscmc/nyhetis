@@ -22,6 +22,12 @@ describe DossierEndpoint, integration: true do
     it { should be_success }
   end
 
+  context "PUT /api/v1/words" do 
+    let(:endpoint) { url("/api/v1/words") } 
+    subject{ Typhoeus.put(endpoint) }
+    it { should be_success }
+  end
+
   def url(endpoint)
     __url = "#{@config["server"]["host"]}:#{@config["server"]["port"]}"
     "#{__url}#{endpoint}"

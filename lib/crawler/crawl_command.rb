@@ -15,6 +15,7 @@ class CrawlCommand
   end
 
   def start!
+    return false if BagOfWords.empty?
     lock!
     crawlers.each do |crawler|
       crawler.instance.start(crawler.url)
@@ -45,6 +46,5 @@ class CrawlCommand
   def crawlers
     @urls.map{|url| OpenStruct.new(url: url, instance: instance(url)) }
   end
-
 
 end
