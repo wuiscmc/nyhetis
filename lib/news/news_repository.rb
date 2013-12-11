@@ -4,18 +4,18 @@ class NewsRepository
 
   REDIS_PREFIX = 'news'
 
-  def save_new(new)
-    id = Digest::MD5.hexdigest(new.url)
-    unless fetch_new(new.url)
-      redis.multi do 
+  def save_new(new_fetched)
+    id = Digest::MD5.hexdigest(new_fetched.url)
+    unless fetch_new(new_fetched.url)
+      redis.multi do # Transactions in Redis!
         redis.sadd("#{REDIS_PREFIX}:all", id)
-        redis.set("#{REDIS_PREFIX}:#{id}:url", new.url)
-        redis.set("#{REDIS_PREFIX}:#{id}:text", new.text)
-        redis.set("#{REDIS_PREFIX}:#{id}:heading", new.heading)
-        redis.set("#{REDIS_PREFIX}:#{id}:klass", new.class.to_s)
+        redis.set("#{REDIS_PREFIX}:#{id}:url", new_fetched.url)
+        redis.set("#{REDIS_PREFIX}:#{id}:text", new_fetched.text)
+        redis.set("#{REDIS_PREFIX}:#{id}:heading", new_fetched.heading)
+        redis.set("#{REDIS_PREFIX}:#{id}:klass", new_fetched.class.to_s)
       end
     end
-    class_from_string(klass).new(id: id, url: url, relevance: true, text: text, heading: heading)
+    new_fetched.class.new(id: id, url: new_fetched.url, relevance: true, text: new_fetched.text, heading: new_fetched.heading)
   end
 
   def fetch_news()
@@ -36,6 +36,8 @@ class NewsRepository
 
   private
 
+  # support for Ruby 1.9.x 
+  # for Ruby 2.x.x we would just call Kernel.const_get(A::B)
   def class_from_string(str)
     str.split('::').inject(Object) do |mod, class_name|
       mod.const_get(class_name)
