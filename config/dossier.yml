@@ -9,7 +9,7 @@ defaults: &defaults
 
   server:
       host: localhost
-      port: 9292
+      port: 9393
   
   websources: 
       - 'http://www.ideal.es/jaen'
@@ -18,6 +18,17 @@ defaults: &defaults
 
 development: 
   <<: *defaults
+
+test:
+  <<: *defaults
+  database: 
+    namespace: 'nyhetis:db:test'
+    host: localhost
+  websources:
+    - 'http://localhost:7541'
+  newspaper_mock:
+    host: localhost
+    port: 7541
 
 integration:
   <<: *defaults

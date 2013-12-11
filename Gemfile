@@ -10,6 +10,7 @@ gem 'redis-namespace'
 gem 'debugger'
 gem 'rake'
 gem 'unidecoder'
+gem 'pry'
 group :development, :test do 
   
 end
@@ -17,7 +18,7 @@ end
 group :test do 
   gem 'rspec'
   gem 'factory_girl'
-  #gem 'fakeredis', :require => "fakeredis/rspec"
+  gem 'fakeredis', :require => "fakeredis/rspec"
   gem 'typhoeus'
   gem 'fuubar'
 end
