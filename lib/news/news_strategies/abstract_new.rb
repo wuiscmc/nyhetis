@@ -61,6 +61,24 @@ module New
 
 	end
 
+	def self.translate_month(month)
+		month_translations = {
+		 "enero" => "january" ,
+		 "febrero" => "february" ,
+		 "marzo" => "march" ,
+		 "abril" => "april" ,
+		 "mayo" => "may" ,
+		 "junio" => "june" ,
+		 "julio" => "july" ,
+		 "agosto" => "august" ,
+		 "septiembre" => "september" ,
+		 "octubre" => "october" ,
+		 "noviembre" => "november" ,
+		 "diciembre" => "december" 
+		}
+		month_translations[month]
+	end
+
 end
 
 require_relative 'ideal_jaen'
