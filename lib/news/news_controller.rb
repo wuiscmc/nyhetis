@@ -1,6 +1,5 @@
 require_relative 'news_service'
 require_relative 'news_repository'
-require_relative 'relevance/relevance_command'
 
 class NewsController
 
