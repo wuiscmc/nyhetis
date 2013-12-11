@@ -1,7 +1,8 @@
 require 'sinatra/base'
 require 'json'
-require_relative '../news/news_controller'
+require_relative '../bag_of_words/bag_of_words_controller'
 require_relative '../crawler/crawling_controller'
+require_relative '../news/news_controller'
 
 # Main endpoint of the application
 # 
@@ -16,6 +17,7 @@ class DossierEndpoint < Sinatra::Base
     super(args)
     @crawling_controller = CrawlingController.new
     @news_controller = NewsController.new
+    @bow_controller = BagOfWordsController.new
   end
 
   # GET /search
@@ -37,6 +39,15 @@ class DossierEndpoint < Sinatra::Base
     content_type :json
     news = @news_controller.fetch_news()
     {count: news.size, payload: news}.to_json
+  end
+
+  # PUT /words
+  # modifies the bag of words adding a word
+  # requires to send a form with www-url-form-encoded 
+  put "/words" do 
+    content_type :json
+    success = @bow_controller.add_word(params[:word])
+    {response: success}.to_json
   end
 
   # this endpoint is the heartbeat that will

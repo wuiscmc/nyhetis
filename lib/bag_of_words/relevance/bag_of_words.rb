@@ -3,23 +3,36 @@ require_relative '../../util/normalizer'
 
 class BagOfWords
 
+  REDIS_PREFIX = 'bagwords:words'
+
   def self.retrieve_words
-    Word.all
+    redis.smembers(REDIS_PREFIX).map{|w| Word.new(text: w)}
+  end
+
+  def self.empty?
+    retrieve_words.empty?
+  end
+
+  def fetch_words
+    redis.smembers(REDIS_PREFIX).map{|w| Word.new(text: w)}
+  end
+
+  def empty?
+    fetch_words.empty?
+  end
+
+  def add_word(word)
+    redis.srem(REDIS_PREFIX, word)
+    redis.sadd(REDIS_PREFIX, word)
   end
 
   class Word 
 
     attr_accessor :text
-    REDIS_PREFIX = 'bagwords:words'
 
     def initialize(params = {})
       @text = normalize(params[:text])
     end
-    
-    def self.all 
-      redis.smembers(REDIS_PREFIX).map{|w| Word.new(text: w)}
-    end
-
 
     def in?(string)
       !(normalize(string) =~ /\b#{@text}\b/).nil?
