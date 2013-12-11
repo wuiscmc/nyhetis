@@ -35,6 +35,8 @@ After installing the dependencies, start up the rack server using the config.ru 
 
 Testing
 ----------
+While testing the whole system it's needed to activate the workers and activate them in RACK_ENV = test and run nyhetis in testing mode, using RACK_ENV = test again. 
+
 It is provided, along with the tests, a Newspaper Mock that serves a single html site. The code is available under test/newspaper_mock. 
 
 Copyright
