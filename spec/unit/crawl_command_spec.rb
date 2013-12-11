@@ -2,6 +2,9 @@ require 'spec_helper'
 
 describe CrawlCommand do 
   
+  before do 
+    redis.del(CrawlCommand::REDIS_PREFIX + ":crawling") 
+  end
 
   context "when the dance begins" do 
     subject(:crawl_command) { CrawlCommand.new }
