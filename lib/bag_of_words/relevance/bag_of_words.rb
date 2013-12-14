@@ -22,8 +22,12 @@ class BagOfWords
   end
 
   def add_word(word)
-    redis.srem(REDIS_PREFIX, word)
+    delete_word(word)
     redis.sadd(REDIS_PREFIX, word)
+  end
+
+  def delete_word(word)
+    redis.srem(REDIS_PREFIX, word)
   end
 
   class Word 
