@@ -14,17 +14,21 @@ shared_context "request" do
     request_with_payload(:put, url, body: payload, headers:{'content-type' => 'application/x-www-form-urlencoded'})
   end
 
-  def post(url)
-    request(:post, url)
+  def post(url, payload)
+    request_with_payload(:post, url, body: payload)
   end
 
-  def delete(url)
-    request(:delete, url)
+  def delete(url, payload)
+    request_with_payload(:delete, url, body: payload)
+  end
+
+  def test_user
+    OpenStruct.new(user: 'test', pass: 'test', api_key: 'test')
   end
 
   private
 
-  def request(method,url)
+  def request(method, url)
     response = Typhoeus.send(method, build_url(url)) 
     expect(response.body).not_to be_empty
     JSON.parse!(response.body)
