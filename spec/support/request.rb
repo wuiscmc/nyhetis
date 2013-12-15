@@ -1,47 +1,46 @@
 require 'json'
 require 'psych'
 require 'typhoeus'
-
+require 'pry'
 shared_context "request" do 
 
-  CONFIG_INTEGRATION = Psych.load_file("config/dossier.yml")["integration"].freeze
-
-  def get(url)
-    response = request(:get, url)
+  def get(url, params = {})
+    request(:get, url)
   end
 
-  def put(url, payload)
-    request_with_payload(:put, url, body: payload, headers:{'content-type' => 'application/x-www-form-urlencoded'})
+  def put(url, params = {})
+    params = {headers: {}}.merge(params)
+    params[:headers] = {'Content-Type' => 'application/x-www-form-urlencoded'}.merge(params[:headers])
+    request(:put, url, params)
   end
 
-  def post(url, payload)
-    request_with_payload(:post, url, body: payload)
+  def post(url, params = {})
+    request(:post, url, params)
   end
 
-  def delete(url, payload)
-    request_with_payload(:delete, url, body: payload)
+  def delete(url, params = {})
+    request(:delete, url, params)
   end
 
   def test_user
     OpenStruct.new(user: 'test', pass: 'test', api_key: 'test')
   end
 
-  private
-
-  def request(method, url)
-    response = Typhoeus.send(method, build_url(url)) 
-    expect(response.body).not_to be_empty
-    JSON.parse!(response.body)
+  def login_user
+    response = post('/session', body: {user: test_user.user, password: test_user.pass, api_key: test_user.api_key})
+    response['session']
   end
 
-  def request_with_payload(method, url, payload)
-    response = Typhoeus.send(method, build_url(url), payload) 
+  private
+
+  def request(method, url, params = {})
+    response = Typhoeus.send(method, build_url(url), params) 
     expect(response.body).not_to be_empty
     JSON.parse!(response.body)
   end
 
   def build_url(path)
-      __url = "#{CONFIG_INTEGRATION["server"]["host"]}:#{CONFIG_INTEGRATION["server"]["port"]}"
+      __url = "#{CONFIG["server"]["host"]}:#{CONFIG["server"]["port"]}"
       __url + "/api/v1" + path
   end
 
