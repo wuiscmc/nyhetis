@@ -74,17 +74,20 @@ class DossierEndpoint < Sinatra::Base
 
   # POST /session
   # creates a session in the system for a user
-  # => response: the session_id that should be sent in every internal request. 
+  # => session: the session_id that should be sent in every internal request. 
   post '/session' do 
     content_type :json
     session_id = @authentication_controller.create_session(params)
-    { session: session_id }.to_json
+    {session: session_id}.to_json
   end
 
+  # DELETE /session
+  # logs out a system from the user by reseting his session
+  # => session: the session_id after the request - empty string
   delete '/session' do 
     content_type :json
     session_id = @authentication_controller.delete_session(params)
-    { session: session_id }.to_json
+    {session: session_id}.to_json
   end
 
   # GET /ping
@@ -93,6 +96,17 @@ class DossierEndpoint < Sinatra::Base
   # core is working or not
   get "/ping" do 
     "PONG"
+  end
+
+  before '/words' do 
+    @authentication_controller.validate_session({
+      user: env['HTTP_USER'], 
+      session_id: env['HTTP_SESSION_ID']
+    })
+  end
+
+  error AuthenticationFailedError do 
+    halt 401, {'Content-Type' => 'application/json'}, {code: 401, message: 'unauthorized!'}.to_json
   end
 
 end
