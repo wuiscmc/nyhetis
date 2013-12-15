@@ -21,4 +21,13 @@ class AuthenticationController
     session.logout
   end
 
+  def validate_session(params)
+    session = Session.new({
+      user: params[:user],
+      session_id: params[:session_id],
+      api_key: params[:api_key]
+    })
+    session.authenticate
+  end
+
 end
