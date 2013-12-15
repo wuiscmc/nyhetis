@@ -22,7 +22,7 @@ class Encryptor
   end
 
   def self.encryptor
-    OpenSSL::Cipher::AES.new(128, :CBC)
+    OpenSSL::Cipher::AES.new(256, :CBC)
   end
 
 end
