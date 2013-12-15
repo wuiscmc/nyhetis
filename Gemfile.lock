@@ -43,8 +43,6 @@ GEM
     eventmachine (1.0.3)
     factory_girl (4.3.0)
       activesupport (>= 3.0.0)
-    fakeredis (0.4.2)
-      redis (~> 3.0.0)
     ffi (1.9.3)
     fuubar (1.2.1)
       rspec (~> 2.0)
@@ -126,7 +124,6 @@ DEPENDENCIES
   cobweb!
   debugger
   factory_girl
-  fakeredis
   fuubar
   nokogiri
   pry
