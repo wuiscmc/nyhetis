@@ -21,7 +21,7 @@ module New
 				return false
 			else
 				begin
-					@date = Date.parse(date.split(" ")[2]) unless date.empty?
+					@date = Date.strptime(date.split(" ")[4],"%d/%m/%Y")
 				rescue 
 					@date = ""
 				end

@@ -16,13 +16,11 @@ module New
 			page = Nokogiri::HTML(@body)
 			heading = page.css(".zonadecontenidos h1.headline").text
 			content = page.css(".zonadecontenidos .articulo .text").text
-			date = page.css(".grouphead .date").text
+			date = page.css(".art_head .date").text
 			return false if heading.empty? && content.empty?
 			unless date.empty? 
 				begin
-					date = d.split(" ")
-					month = New.transate_month(d[2].downcase)
-					@date = Date.parse(d[4] + "/" + month + "/" + d[0])
+					@date = Date.strptime(date.split(" ")[0], "%d.%m.%y")
 				rescue 
 					@date = ""
 				end

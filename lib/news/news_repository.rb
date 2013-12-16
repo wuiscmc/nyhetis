@@ -12,6 +12,7 @@ class NewsRepository
         redis.set("#{REDIS_PREFIX}:#{id}:url", new_fetched.url)
         redis.set("#{REDIS_PREFIX}:#{id}:text", new_fetched.text)
         redis.set("#{REDIS_PREFIX}:#{id}:heading", new_fetched.heading)
+        redis.set("#{REDIS_PREFIX}:#{id}:date", new_fetched.date)
         redis.set("#{REDIS_PREFIX}:#{id}:klass", new_fetched.class.to_s)
       end
     end
@@ -24,8 +25,9 @@ class NewsRepository
       url = redis.get("#{REDIS_PREFIX}:#{member_id}:url")
       text = redis.get("#{REDIS_PREFIX}:#{member_id}:text")
       heading = redis.get("#{REDIS_PREFIX}:#{member_id}:heading")
+      date = redis.get("#{REDIS_PREFIX}:#{member_id}:date")
       klass = redis.get("#{REDIS_PREFIX}:#{member_id}:klass")
-      class_from_string(klass).new(url: url, relevance: true, text: text, heading: heading)
+      class_from_string(klass).new(url: url, relevance: true, text: text, heading: heading, date: date)
     end
   end
 

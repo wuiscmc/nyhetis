@@ -4,7 +4,7 @@ module New
 
 		attr_accessor :relevance
 
-		attr_accessor :url, :text, :heading, :body
+		attr_accessor :url, :text, :heading, :body, :date
 
 		def initialize(attributes = {})
 			attributes = {id: nil, relevance: false, text: "", heading: "", body: ""}.merge(attributes)
