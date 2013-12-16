@@ -5,7 +5,7 @@ require 'pry'
 shared_context "request" do 
 
   def get(url, params = {})
-    request(:get, url)
+    request(:get, url, params)
   end
 
   def put(url, params = {})
@@ -34,7 +34,7 @@ shared_context "request" do
   private
 
   def request(method, url, params = {})
-    response = Typhoeus.send(method, build_url(url), params) 
+    response = Typhoeus::Request.send(method, build_url(url), params)
     expect(response.body).not_to be_empty
     JSON.parse!(response.body)
   end
