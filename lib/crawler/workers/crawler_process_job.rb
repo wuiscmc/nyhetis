@@ -21,7 +21,18 @@ class CrawlerProcessJob
 
 	def initialize(params = {})
 		params.each do |name, value|
-			send("#{name}=", value == 'http://localhost:7541/' ? "diariojaen.es" : value)
+      value = case value 
+      when 'http://localhost:7541/'
+        'diariojaen.es'
+      when 'http://localhost:7542/'
+        'ideal.es'
+      when 'http://localhost:7543/'
+        'andaluciainformacion.es'
+      else
+        value
+      end
+
+			send("#{name}=", value)
 		end
 	end
 

@@ -26,9 +26,10 @@ test:
     host: localhost
   websources:
     - 'http://localhost:7541'
+    - 'http://localhost:7542'
+    - 'http://localhost:7543'
   newspaper_mock:
     host: localhost
-    port: 7541
 
 integration:
   <<: *defaults
