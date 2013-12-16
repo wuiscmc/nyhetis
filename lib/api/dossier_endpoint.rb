@@ -40,7 +40,7 @@ class DossierEndpoint < Sinatra::Base
   # => count : is the number of elements 
   get '/news' do
     content_type :json
-    news = @news_controller.fetch_news()
+    news = @news_controller.fetch_news(params)
     {count: news.size, payload: news}.to_json
   end
 

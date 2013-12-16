@@ -7,8 +7,8 @@ class NewsController
 		news_service.analyze_content(content)
 	end
 
-	def fetch_news()
-		news_service.fetch_news()
+	def fetch_news(params = {})
+		news_service.fetch_news(params)
 	end
 
 	private

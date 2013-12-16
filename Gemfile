@@ -11,11 +11,13 @@ gem 'debugger'
 gem 'rake'
 gem 'unidecoder'
 
-group :development, :test do 
-  gem 'pry'  
+
+group :development do
+  gem 'pry'
 end
 
 group :test do 
+  gem 'pry'  
   gem 'rspec'
   gem 'factory_girl'
   gem 'typhoeus'

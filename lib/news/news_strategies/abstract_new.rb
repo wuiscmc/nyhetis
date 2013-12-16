@@ -14,6 +14,7 @@ module New
 			@relevance = attributes[:relevance]
 			@text = attributes[:text]
 			@heading = attributes[:heading]
+			@date = attributes[:date]
 			parse_content()
 		end
 
@@ -42,7 +43,7 @@ module New
 		end
 
 		def to_json(*args)
-			{url: url, heading: heading, content: text, source: source}.to_json
+			{url: url, heading: heading, content: text, source: source, date: date}.to_json
 		end
 
 	end

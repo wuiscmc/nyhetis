@@ -20,8 +20,8 @@ class NewsService
 		concrete_new
 	end
 
-	def fetch_news
-		@news_repository.fetch_news()
+	def fetch_news(params = {})
+		@news_repository.fetch_news(params)
 	end
 
 end
