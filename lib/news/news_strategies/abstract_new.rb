@@ -27,7 +27,7 @@ module New
 		end
 
 		def relevant?
-			@relevance
+			@relevance > 0
 		end
 
 		def relevance=(rel)

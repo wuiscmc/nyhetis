@@ -39,7 +39,11 @@ class BagOfWords
     end
 
     def in?(string)
-      !(normalize(string) =~ /\b#{@text}\b/).nil?
+      matches_in_text(string) > 0
+    end
+
+    def matches_in_text(string)
+      normalize(string).scan(/\b#{@text}/).size
     end
 
     def to_s

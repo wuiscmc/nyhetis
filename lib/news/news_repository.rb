@@ -15,10 +15,11 @@ class NewsRepository
         redis.set("#{REDIS_PREFIX}:#{id}:text", new_fetched.text)
         redis.set("#{REDIS_PREFIX}:#{id}:heading", new_fetched.heading)
         redis.set("#{REDIS_PREFIX}:#{id}:date", new_fetched.date)
+        redis.set("#{REDIS_PREFIX}:#{id}:relevance", new_fetched.relevance)
         redis.set("#{REDIS_PREFIX}:#{id}:klass", new_fetched.class.to_s)
       end
     end
-    new_fetched.class.new(id: id, url: new_fetched.url, relevance: true, text: new_fetched.text, heading: new_fetched.heading)
+    new_fetched.class.new(id: id, url: new_fetched.url, relevance: new_fetched.relevance, text: new_fetched.text, heading: new_fetched.heading)
   end
 
   def fetch_news(params = {})
@@ -40,7 +41,8 @@ class NewsRepository
     heading = redis.get("#{REDIS_PREFIX}:#{member_id}:heading")
     date = redis.get("#{REDIS_PREFIX}:#{member_id}:date")
     klass = redis.get("#{REDIS_PREFIX}:#{member_id}:klass")
-    class_from_string(klass).new(url: url, relevance: true, text: text, heading: heading, date: date)
+    relevance = redis.get("#{REDIS_PREFIX}:#{member_id}:relevance")
+    class_from_string(klass).new(url: url, relevance: relevance, text: text, heading: heading, date: date)
   end
 
   def apply_filters(fetched_news, params = {})

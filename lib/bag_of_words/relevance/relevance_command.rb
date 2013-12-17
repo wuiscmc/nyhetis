@@ -7,13 +7,13 @@ class RelevanceCommand
   end
 
 	def calculate(new)
-    words_in_text?(new.heading) || words_in_text?(new.text)
+    words_in_text(new.heading) + words_in_text(new.text)
   end
 
   private 
 
-  def words_in_text?(text)
-    !@words.select{ |word| word.in?(text) }.empty?
+  def words_in_text(text)
+    @words.inject(0){|sum, word| sum += word.matches_in_text(text) }
   end
 
   def bag_of_words

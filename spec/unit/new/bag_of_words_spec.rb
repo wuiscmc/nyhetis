@@ -14,6 +14,30 @@ describe BagOfWords do
 
   describe BagOfWords::Word do 
 
+    context "when a new wants to know whether is relevant or not" do 
+      let(:text){
+        %Q-
+          Carabirubi,carabiruba, 
+          yo no se que tienes que 
+          cada día me gustas mas 
+
+          Carabirubi,carabiruba, 
+          yo no se que tienes que 
+          cada día me gustas mas 
+
+          Tu cara niña tu cara 
+          con que te la lavaras 
+          con esencia de romero 
+          o agua de manantial 
+        -
+      }
+
+      it "should count its number of apparisons in the text" do 
+        word = BagOfWords::Word.new(text: 'carabirubi')
+        expect(word.matches_in_text(text)).to be == 2
+      end
+    end
+
     it "should never be empty" do 
       words = BagOfWords.new.fetch_words
       expect(words).to be_kind_of(Array)
