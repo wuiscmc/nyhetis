@@ -1,5 +1,6 @@
 require_relative './authentication_failed_error'
 require_relative './token'
+require_relative './user'
 
 class Session
 
@@ -40,7 +41,7 @@ class Session
   private
 
   def valid_credentials?
-    @user == "test" && @pass == "test"
+    User.valid?(@user, @pass)
   end
 
 end

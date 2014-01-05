@@ -15,8 +15,7 @@ class Normalizer
     .gsub('ä','a').gsub('ë','e').gsub('ï','i').gsub('ö','o').gsub('ü','u')
     .gsub('À','A').gsub('È','E').gsub('Ì','I').gsub('Ò','O').gsub('Ù','U')
     .gsub('ñ','n').gsub('ç','[c]').gsub('Ñ','N').gsub('Ç','C')
-    .gsub('å','a').gsub('Å','A').downcase
-    .gsub(/[^\w\.,?]/,' ').strip.squeeze(' ')
+    .gsub(/[^\w\.,?]/,' ').strip.squeeze(' ').downcase
   end
 
   def self.news_process(string)
@@ -74,6 +73,7 @@ class Normalizer
         .gsub('\x80\x9d', "'").gsub('\x80\x9c',"'")
         .gsub('\xBF',"")
         
+
         string.downcase.to_ascii.gsub("\"","").gsub("\\","")
 
     rescue Encoding::UndefinedConversionError => e

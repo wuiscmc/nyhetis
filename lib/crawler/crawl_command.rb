@@ -6,32 +6,44 @@ class CrawlCommand
   REDIS_PREFIX = 'crawler'
 
   def initialize
-    @urls = CONFIG["websources"] # redis.smembers("nyhetis:db:crawler:source_urls")
-    @active = redis.get("#{REDIS_PREFIX}:crawling") 
+    @websources = CONFIG["websources"] # redis.smembers("nyhetis:db:crawler:source_urls")
   end
 
   def active?
     !active.nil?
   end
 
+  def status
+    if active?
+      'ACTIVE'
+    else
+      'INACTIVE'
+    end
+  end
+
   def start!
-    return false if BagOfWords.empty?
+    return false if BagOfWords.empty? || active?
     lock!
     crawlers.each do |crawler|
-      crawler.instance.start(crawler.url)
+      crawler.instance.start(crawler.base_url)
     end
     active?
   end
 
   private
 
-  def instance(url)
+  def instance(options)
+    host = CONFIG['database']['host']
+    port = CONFIG['database']['port']
+
     Cobweb.new(
       :processing_queue => "CrawlerProcessJob",  
       :crawl_finished_queue => "CrawlerFinishedJob", 
       :valid_mime_types => ["text/html"],
+      :redis_options => {host: host, port: port},
       :direct_call_process_job => true,
-      :internal_urls => ["#{url}/*"]
+      :obey_robots => true,
+      :internal_urls => options['internal_urls']
     ) 
   end
 
@@ -40,11 +52,13 @@ class CrawlCommand
   end
 
   def lock!
-    @active = redis.set("#{REDIS_PREFIX}:crawling", true)
+    redis.set("#{REDIS_PREFIX}:crawling", true)
   end
   
   def crawlers
-    @urls.map{|url| OpenStruct.new(url: url, instance: instance(url)) }
+    @websources.map do |options|
+      OpenStruct.new(base_url: options['base_url'], instance: instance(options)) 
+    end
   end
 
 end

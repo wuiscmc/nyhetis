@@ -1,0 +1,26 @@
+# How to run the integration test
+
+Some acceptance tests have been writen to test the whole flow. Since the system needs to find some newspapers, there is a mock class NewspaperMock that launches a Sinatra app that mocks a given newspaper (by default DiarioJaen).
+
+Requirements: 
+    - resque workers up and running in TEST mode
+    - the system running in TEST  mode
+
+Steps:
+
+1. Start the system in TEST mode: 
+
+    RACK_ENV=test rackup config.ru
+
+    For fishers: begin;set -lx RACK_ENV test;rackup config.ru;end
+
+2. Start the crawler workers in TEST mode as well:
+
+    bundle exec rake resque:workers RACK_ENV=test RESQUE_WORKER=true TERM_CHILD=1 QUEUE=cobweb_crawl_job$
+$,crawler_resque_job,crawler_finished_job COUNT=10
+
+3. Run the tests!
+
+    rspec
+
+

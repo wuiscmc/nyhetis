@@ -43,11 +43,15 @@ class BagOfWords
     end
 
     def matches_in_text(string)
-      normalize(string).scan(/\b#{@text}/).size
+      normalize(string).scan(/\b#{@text}\b/).size
     end
 
     def to_s
       @text
+    end
+
+    def to_json(*args)
+      {text: @text}.to_json
     end
 
     private 

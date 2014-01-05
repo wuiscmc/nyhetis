@@ -2,7 +2,6 @@ require 'spec_helper'
 require_relative '../support/request'
 require_relative '../support/bag_of_words'
 require_relative '../newspaper_mock/newspaper_mock'
-
 # Specification for "Search for news"
 # it requires some workers to be up and running,
 # to enable 10 workers that will listen to the events: 
@@ -27,8 +26,9 @@ describe "Search for news", acceptance: true do
 
     context "when no filter is given" do 
     	it "should detect the relevant news" do 
-            news = get('/news')
-            expect(news['count']).to eq(3)
+            response = get('/news')
+            binding.pry
+            expect(response['news'].size).to eq(3)
     	end
     end
 
@@ -38,8 +38,8 @@ describe "Search for news", acceptance: true do
         let(:todate) { '2013-01-01' }
 
         it "should detect the relevant news matching the filter" do 
-            news = get("/news", params: { fromts: fromdate, tots: todate })
-            expect(news['count']).to eq(1)
+            response = get("/news", params: { fromts: fromdate, tots: todate })
+            expect(response['news'].size).to eq(1)
         end
     end
 

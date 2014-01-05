@@ -25,8 +25,26 @@ module New
 					@date = ""
 				end
 			end
-			@heading = Normalizer.news_process(heading.gsub("\n","").strip)
-			@text = Normalizer.news_process(content.gsub("\n","").strip)
+			image_path = get_image_path(page)
+			@image = image_path.empty? ? "" : "http://www.ideal.es" + image_path
+			@heading = heading#.gsub("\n","").strip
+			@text = content#.gsub("\n","").strip
+		end
+
+		private 
+
+		def get_image_path(page)
+			begin
+				page.css('img').reject{|img|
+			     img.attribute('alt').nil? 
+			   }.reject{|img| 
+			     img.attribute('alt').value.empty?
+			   }.reject{|img| 
+			     img.attribute('src').value.include?('http') 
+			   }.first.attribute('src').value
+			rescue => e
+				""
+			end
 		end
 
 	end

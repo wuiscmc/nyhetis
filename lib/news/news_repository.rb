@@ -1,29 +1,33 @@
 require 'digest/md5'
-require 'pry'
 require 'date'
-
+require 'pry'
 class NewsRepository
 
   REDIS_PREFIX = 'news'
 
+  ATTRIBUTES = %w(url text heading date relevance image)
+
   def save_new(new_fetched)
     id = Digest::MD5.hexdigest(new_fetched.url)
-    unless fetch_new(new_fetched.url)
-      redis.multi do # Transactions in Redis!
-        redis.sadd("#{REDIS_PREFIX}:all", id)
-        redis.set("#{REDIS_PREFIX}:#{id}:url", new_fetched.url)
-        redis.set("#{REDIS_PREFIX}:#{id}:text", new_fetched.text)
-        redis.set("#{REDIS_PREFIX}:#{id}:heading", new_fetched.heading)
-        redis.set("#{REDIS_PREFIX}:#{id}:date", new_fetched.date)
-        redis.set("#{REDIS_PREFIX}:#{id}:relevance", new_fetched.relevance)
-        redis.set("#{REDIS_PREFIX}:#{id}:klass", new_fetched.class.to_s)
+    exists = fetch_new(new_fetched.url)
+    redis.multi do
+      if exists
+        redis.srem("#{REDIS_PREFIX}:all", id)
+        redis.zrem("#{REDIS_PREFIX}:sorted", id)
+      end
+      redis.sadd("#{REDIS_PREFIX}:all", id)
+      redis.zadd("#{REDIS_PREFIX}:sorted", new_fetched.relevance, id)
+      redis.set("#{REDIS_PREFIX}:#{id}:klass", new_fetched.class.to_s)
+      new_fetched.attributes.each do |key, value|
+        redis.set("#{REDIS_PREFIX}:#{id}:#{key.to_s}", value)
       end
     end
-    new_fetched.class.new(id: id, url: new_fetched.url, relevance: new_fetched.relevance, text: new_fetched.text, heading: new_fetched.heading)
+
+    return new_fetched.class.new(new_fetched.attributes.merge(id: id))
   end
 
   def fetch_news(params = {})
-    new_ids = redis.smembers("#{REDIS_PREFIX}:all")
+    new_ids = redis.zrange("#{REDIS_PREFIX}:sorted", 0 ,-1)
     fetched_news = new_ids.map { |new_id| __fetch_new(new_id) }
     apply_filters(fetched_news,params)
   end
@@ -36,22 +40,27 @@ class NewsRepository
   private
 
   def __fetch_new(member_id)
-    url = redis.get("#{REDIS_PREFIX}:#{member_id}:url")
-    text = redis.get("#{REDIS_PREFIX}:#{member_id}:text")
-    heading = redis.get("#{REDIS_PREFIX}:#{member_id}:heading")
-    date = redis.get("#{REDIS_PREFIX}:#{member_id}:date")
     klass = redis.get("#{REDIS_PREFIX}:#{member_id}:klass")
-    relevance = redis.get("#{REDIS_PREFIX}:#{member_id}:relevance")
-    class_from_string(klass).new(url: url, relevance: relevance, text: text, heading: heading, date: date)
+    
+    attributes = ATTRIBUTES.inject({}) do |hash, attribute|
+      value = redis.get("#{REDIS_PREFIX}:#{member_id}:#{attribute}")
+      hash.merge({:"#{attribute}" => value})
+    end
+
+    class_from_string(klass).new(attributes) 
   end
 
   def apply_filters(fetched_news, params = {})
     return fetched_news if params.empty?
     fetched_news.select do |new|
-      time = Date.parse(new.date)
-      from = Date.parse(params['fromts'])
-      to = Date.parse(params['tots'])
-      time <= to && time >= from
+      begin
+        time = Date.parse(new.date)
+        from = Date.parse(params['fromts'])
+        to = Date.parse(params['tots'])
+        time <= to && time >= from
+      rescue ArgumentError => e
+        puts "invalid date"
+      end
     end
   end
 

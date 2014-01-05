@@ -1,44 +1,68 @@
 defaults: &defaults
-  
   database: 
     namespace: 'nyhetis:db'
-    host: localhost
-    port: 1111
-    user: carlos
-    password: 1234
+    host: '127.0.0.1'
+    port: 6379
 
-  server:
-      host: localhost
-      port: 9393
-  
   websources: 
-      - 'http://www.ideal.es/jaen'
-      #- 'http://www.diariojaen.es'
-      - 'http://andaluciainformacion.es/jaen'
+    -
+      url: 'http://www.diariojaen.es'
+      base_url: 'http://www.diariojaen.es'
+      internal_urls: ['http://www.diariojaen.es/*']
+    -
+      url: 'http://www.ideal.es/jaen'
+      base_url: 'http://www.ideal.es/jaen'
+      internal_urls: ['http://www.ideal.es/jaen/*' ]
+    -
+      url: 'http://andaluciainformacion.es/jaen'
+      base_url: 'http://andaluciainformacion.es/jaen'
+      internal_urls: ['http://www.andaluciainformacion.es/jaen/*' ]
 
 development: 
   <<: *defaults
+
+evaluation: 
+  <<: *defaults
+  database: 
+    namespace: 'nyhetis:db:eval'
+
+  websources: 
+    # -
+    #   url: 'http://www.diariojaen.es'
+    #   base_url: 'http://www.diariojaen.es/index.php/menusuplemento/campus'
+    #   internal_urls: ['http://www.diariojaen.es/index.php/menusuplemento/campus*']
+
+    # -
+    #   url: 'http://www.ideal.es/jaen'
+    #   base_url: 'http://www.ideal.es/jaen/local/linares/'
+    #   internal_urls: ['http://www.ideal.es/jaen/*/linares/*']
+    -
+      url: 'http://andaluciainformacion.es/jaen'
+      base_url: 'http://andaluciainformacion.es/jaen'
+      internal_urls: ['http://andaluciainformacion.es/jaen/*']
+
 
 test:
   <<: *defaults
   database: 
     namespace: 'nyhetis:db:test'
-    host: localhost
+
   websources:
-    - 'http://localhost:7541'
-    - 'http://localhost:7542'
-    - 'http://localhost:7543'
+    - 
+      url: 'http://localhost:7541'
+      base_url: 'http://localhost:7541'
+      internal_urls: ['http://localhost:7541/*']
+    -
+      url: 'http://localhost:7542'
+      base_url: 'http://localhost:7542'
+      internal_urls: ['http://localhost:7542/*']
+    -
+      url: 'http://localhost:7543'
+      base_url: 'http://localhost:7543'
+      internal_urls: ['http://localhost:7543/*']
+
   newspaper_mock:
     host: localhost
-
-integration:
-  <<: *defaults
-  newspaper_mock:
-    host: localhost
-    port: 7541
-
-  websources: 
-    - 'http://localhost:7541'
 
 production: 
   <<: *defaults

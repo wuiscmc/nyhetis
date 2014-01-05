@@ -1,7 +1,6 @@
 require 'json'
 require 'psych'
 require 'typhoeus'
-require 'pry'
 shared_context "request" do 
 
   def get(url, params = {})

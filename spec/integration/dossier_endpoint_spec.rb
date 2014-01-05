@@ -20,19 +20,19 @@ describe DossierEndpoint, integration: true do
   context "PUT /api/v1/words" do 
     let(:endpoint) { url("/api/v1/words") } 
     subject{ Typhoeus.put(endpoint).code }
-    it { should == 401 }
+    it { should == 403 }
   end
 
   context "DELETE /api/v1/words" do 
     let(:endpoint) { url("/api/v1/words") } 
     subject{ Typhoeus.delete(endpoint).code }
-    it { should == 401 }
+    it { should == 403 }
   end
 
   context "GET /api/v1/words" do 
     let(:endpoint) { url("/api/v1/words") } 
     subject{ Typhoeus.get(endpoint).code }
-    it { should == 401 }
+    it { should == 403 }
   end
 
   def url(endpoint)

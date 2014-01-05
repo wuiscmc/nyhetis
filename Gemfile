@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'cobweb', path: "../pfc/cobweb"
+gem 'cobweb', path: "vendor/cobweb"
 gem 'resque'
 gem 'sinatra'
 gem 'sinatra-contrib', '<= 1.3.1'
@@ -10,7 +10,8 @@ gem 'redis-namespace'
 gem 'debugger'
 gem 'rake'
 gem 'unidecoder'
-
+#gem 'sinatra-cross_origin'
+gem 'rack-cors', require: 'rack/cors'
 
 group :development do
   gem 'pry'

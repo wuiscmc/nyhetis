@@ -1,0 +1,13 @@
+users: 
+  -
+    email: test
+    password: test
+  - 
+    email: wuiscmc
+    password: test
+  - 
+    email: genimarca
+    password: test
+  -
+    email: laurena
+    password: test

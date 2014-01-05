@@ -5,7 +5,7 @@ class NewspaperMock
 
   def initialize(newspaper = :diariojaen)
     config_file_path = File.expand_path('../../config/dossier.yml', File.dirname(__FILE__))
-    config = Psych.load_file(config_file_path)["integration"]["newspaper_mock"]
+    config = Psych.load_file(config_file_path)["test"]["newspaper_mock"]
     @host = config['host']
     @newspaper = newspaper
 

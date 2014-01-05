@@ -14,7 +14,7 @@ describe 'the impact of the bag of words' do
   context "when the user is not logged in" do 
     it "should ignore the request" do 
       response = get("/words")
-      expect(response['code']).to eq(401)
+      expect(response['code']).to eq(403)
     end
   end
 
@@ -30,14 +30,14 @@ describe 'the impact of the bag of words' do
 
     context "when the bag contains one word" do 
       it "should detect the news containing it" do 
-        put("/words", body: {word: "word"}, headers:{'Session-Id' => session_id, 'User' => test_user.user})
+        put("/words", body: {word: "word"}, headers:{'Session-Id' => session_id, 'Auth-User' => test_user.user})
         response = get("/search")
         expect(response['response']).to be_true
       end
 
       context "when the word is deleted" do 
         it "should stop accepting requests again" do 
-          delete("/words", body: {word: "word"}, headers:{'Session-Id' => session_id, 'User' => test_user.user})
+          delete("/words", body: {word: "word"}, headers:{'Session-Id' => session_id, 'Auth-User' => test_user.user})
           response = get("/search")
           expect(response['response']).to be_false
         end

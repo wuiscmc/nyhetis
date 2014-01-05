@@ -1,0 +1,832 @@
+[ 2013-12-30 16:05:50.1990 4392/0x7fff7c7a6310 agents/Watchdog/Main.cpp:510 ]: Options: { 'analytics_log_user' => 'luizcarlos', 'cleanup_pidfiles' => 'L3Zhci9mb2xkZXJzLzkzL2NsemJoc3duNmw1OWNmMmQ2MjcxNjA5YzAwMDBnbi9UL3Bhc3Nlbmdlci1zdGFuZGFsb25lLjE1ZTU1cXMvdGVtcF9kaXJfdG91Y2hlci5waWQ=', 'default_group' => 'staff', 'default_python' => 'python', 'default_ruby' => '/Users/luizcarlos/.rbenv/versions/2.0.0-p353/bin/ruby', 'default_user' => 'luizcarlos', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/var/folders/93/clzbhswn6l59cf2d6271609c0000gn/T/passenger-standalone.15e55qs/locations.ini', 'passenger_version' => '4.0.29', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.29', 'web_server_pid' => '4391', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2013-12-30 16:05:50.2187 4394/0x7fff7c7a6310 agents/HelperAgent/Main.cpp:625 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.4391/generation-0/request
+PassengerWatchdog(4397,0x7fff7c7a6310) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerWatchdog(4397,0x7fff7c7a6310) malloc: *** error: can't allocate region securely
+PassengerWatchdog(4397,0x7fff7c7a6310) malloc: *** set a breakpoint in malloc_error_break to debug
+[ 2013-12-30 16:05:50.2274 4396/0x7fff7c7a6310 agents/LoggingAgent/Main.cpp:318 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.4391/generation-0/logging
+[ 2013-12-30 16:05:50.2277 4392/0x7fff7c7a6310 agents/Watchdog/Main.cpp:697 ]: All Phusion Passenger agents started!
+App 4408 stdout: 
+App 4408 stderr: *** Phusion Passenger: no passenger_native_support.bundle found for the current Ruby interpreter. Downloading precompiled binary from the Phusion server (set PASSENGER_DOWNLOAD_NATIVE_SUPPORT_BINARY=0 to disable)...
+App 4408 stderr: Attempting to download https://oss-binaries.phusionpassenger.com/binaries/passenger/by_release/4.0.29/rubyext-ruby-2.0.0-x86_64-macosx.tar.gz into /var/folders/93/clzbhswn6l59cf2d6271609c0000gn/T/passenger-native-support-1jb3e7m
+App 4408 stderr: --2013-12-30 16:05:52--  https://oss-binaries.phusionpassenger.com/binaries/passenger/by_release/4.0.29/rubyext-ruby-2.0.0-x86_64-macosx.tar.gz
+App 4408 stderr: Resolving oss-binaries.phusionpassenger.com... 
+App 4408 stderr: 109.107.35.58
+App 4408 stderr: Connecting to oss-binaries.phusionpassenger.com|109.107.35.58|:443... 
+App 4408 stderr: connected.
+App 4408 stderr: HTTP request sent, awaiting response... 
+App 4408 stderr: 404 Not Found
+App 4408 stderr: 2013-12-30 16:05:52 ERROR 404: Not Found.
+App 4408 stderr: 
+App 4408 stderr: *** Phusion Passenger: no passenger_native_support.bundle found for the current Ruby interpreter. Compiling one (set PASSENGER_COMPILE_NATIVE_SUPPORT_BINARY=0 to disable)...
+App 4408 stderr: # mkdir -p /var/folders/93/clzbhswn6l59cf2d6271609c0000gn/T/passenger-standalone.15e55qs/locations.ini/buildout/ruby/ruby-2.0.0-x86_64-macosx
+App 4408 stderr: Not a valid directory. Trying a different one...
+App 4408 stderr: -------------------------------
+App 4408 stderr: # mkdir -p /Users/luizcarlos/.passenger/native_support/4.0.29/ruby-2.0.0-x86_64-macosx
+App 4408 stderr: # cd /Users/luizcarlos/.passenger/native_support/4.0.29/ruby-2.0.0-x86_64-macosx
+App 4408 stderr: # /Users/luizcarlos/.rbenv/versions/2.0.0-p353/bin/ruby '/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/passenger-4.0.29/ext/ruby/extconf.rb'
+App 4408 stdout: checking for alloca.h... yes
+App 4408 stdout: checking for ruby/io.h... yes
+App 4408 stdout: checking for rb_thread_io_blocking_region()... yes
+App 4408 stdout: creating Makefile
+App 4408 stderr: # make
+App 4408 stdout: compiling /Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/passenger-4.0.29/ext/ruby/passenger_native_support.c
+App 4408 stdout: linking shared-object passenger_native_support.bundle
+App 4408 stderr: Compilation succesful.
+App 4408 stderr: 
+App 4408 stderr: -------------------------------
+App 4408 stdout: can't find sidekiq gem
+[ 2013-12-30 16:05:55.4064 4394/0x10f24a000 Pool2/SmartSpawner.h:301 ]: Preloader for /Users/luizcarlos/Documents/workspace/nyhetis started on PID 4408, listening on unix:/tmp/passenger.1.0.4391/generation-0/backends/preloader.4408
+App 4476 stdout: invalid date
+PassengerWatchdog (cleaning up...)(5409,0x7fff7c7a6310) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerWatchdog (cleaning up...)(5409,0x7fff7c7a6310) malloc: *** error: can't allocate region securely
+PassengerWatchdog (cleaning up...)(5409,0x7fff7c7a6310) malloc: *** set a breakpoint in malloc_error_break to debug
+PassengerWatchdog (cleaning up...)(5413,0x7fff7c7a6310) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerWatchdog (cleaning up...)(5413,0x7fff7c7a6310) malloc: *** error: can't allocate region securely
+PassengerWatchdog (cleaning up...)(5413,0x7fff7c7a6310) malloc: *** set a breakpoint in malloc_error_break to debug
+[ 2013-12-30 16:12:03.0504 5457/0x7fff7c7a6310 agents/Watchdog/Main.cpp:510 ]: Options: { 'analytics_log_user' => 'luizcarlos', 'cleanup_pidfiles' => 'L3Zhci9mb2xkZXJzLzkzL2NsemJoc3duNmw1OWNmMmQ2MjcxNjA5YzAwMDBnbi9UL3Bhc3Nlbmdlci1zdGFuZGFsb25lLjEwejQ4am8vdGVtcF9kaXJfdG91Y2hlci5waWQ=', 'default_group' => 'staff', 'default_python' => 'python', 'default_ruby' => '/Users/luizcarlos/.rbenv/versions/2.0.0-p353/bin/ruby', 'default_user' => 'luizcarlos', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/var/folders/93/clzbhswn6l59cf2d6271609c0000gn/T/passenger-standalone.10z48jo/locations.ini', 'passenger_version' => '4.0.29', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.29', 'web_server_pid' => '5456', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2013-12-30 16:12:03.0689 5459/0x7fff7c7a6310 agents/HelperAgent/Main.cpp:625 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.5456/generation-0/request
+[ 2013-12-30 16:12:03.0796 5461/0x7fff7c7a6310 agents/LoggingAgent/Main.cpp:318 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.5456/generation-0/logging
+[ 2013-12-30 16:12:03.0798 5457/0x7fff7c7a6310 agents/Watchdog/Main.cpp:697 ]: All Phusion Passenger agents started!
+App 5473 stdout: 
+App 5473 stdout: can't find sidekiq gem
+[ 2013-12-30 16:12:07.0102 5459/0x109b7e000 Pool2/SmartSpawner.h:301 ]: Preloader for /Users/luizcarlos/Documents/workspace/nyhetis started on PID 5473, listening on unix:/tmp/passenger.1.0.5456/generation-0/backends/preloader.5473
+[ 2013-12-30 16:15:02.7847 6609/0x7fff7c7a6310 agents/Watchdog/Main.cpp:510 ]: Options: { 'analytics_log_user' => 'luizcarlos', 'cleanup_pidfiles' => 'L3Zhci9mb2xkZXJzLzkzL2NsemJoc3duNmw1OWNmMmQ2MjcxNjA5YzAwMDBnbi9UL3Bhc3Nlbmdlci1zdGFuZGFsb25lLm54OXN4MC90ZW1wX2Rpcl90b3VjaGVyLnBpZA==', 'default_group' => 'staff', 'default_python' => 'python', 'default_ruby' => '/Users/luizcarlos/.rbenv/versions/2.0.0-p353/bin/ruby', 'default_user' => 'luizcarlos', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/var/folders/93/clzbhswn6l59cf2d6271609c0000gn/T/passenger-standalone.nx9sx0/locations.ini', 'passenger_version' => '4.0.29', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.29', 'web_server_pid' => '6608', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2013-12-30 16:15:02.8348 6611/0x7fff7c7a6310 agents/HelperAgent/Main.cpp:625 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.6608/generation-0/request
+[ 2013-12-30 16:15:02.8670 6613/0x7fff7c7a6310 agents/LoggingAgent/Main.cpp:318 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.6608/generation-0/logging
+[ 2013-12-30 16:15:02.8673 6609/0x7fff7c7a6310 agents/Watchdog/Main.cpp:697 ]: All Phusion Passenger agents started!
+App 6628 stdout: 
+App 6628 stdout: can't find sidekiq gem
+[ 2013-12-30 16:15:06.7755 6611/0x1106fc000 Pool2/SmartSpawner.h:301 ]: Preloader for /Users/luizcarlos/Documents/workspace/nyhetis started on PID 6628, listening on unix:/tmp/passenger.1.0.6608/generation-0/backends/preloader.6628
+[ 2013-12-30 17:15:38.5748 20558/0x7fff7c7a6310 agents/Watchdog/Main.cpp:510 ]: Options: { 'analytics_log_user' => 'luizcarlos', 'cleanup_pidfiles' => 'L3Zhci9mb2xkZXJzLzkzL2NsemJoc3duNmw1OWNmMmQ2MjcxNjA5YzAwMDBnbi9UL3Bhc3Nlbmdlci1zdGFuZGFsb25lLm5ham1uay90ZW1wX2Rpcl90b3VjaGVyLnBpZA==', 'default_group' => 'staff', 'default_python' => 'python', 'default_ruby' => '/Users/luizcarlos/.rbenv/versions/2.0.0-p353/bin/ruby', 'default_user' => 'luizcarlos', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/var/folders/93/clzbhswn6l59cf2d6271609c0000gn/T/passenger-standalone.najmnk/locations.ini', 'passenger_version' => '4.0.29', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.29', 'web_server_pid' => '20557', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2013-12-30 17:15:38.5938 20560/0x7fff7c7a6310 agents/HelperAgent/Main.cpp:625 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.20557/generation-0/request
+[ 2013-12-30 17:15:38.6055 20562/0x7fff7c7a6310 agents/LoggingAgent/Main.cpp:318 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.20557/generation-0/logging
+[ 2013-12-30 17:15:38.6058 20558/0x7fff7c7a6310 agents/Watchdog/Main.cpp:697 ]: All Phusion Passenger agents started!
+App 20574 stdout: 
+App 20574 stdout: can't find sidekiq gem
+[ 2013-12-30 17:15:42.1717 20560/0x10e888000 Pool2/SmartSpawner.h:301 ]: Preloader for /Users/luizcarlos/Documents/workspace/nyhetis started on PID 20574, listening on unix:/tmp/passenger.1.0.20557/generation-0/backends/preloader.20574
+PassengerHelperAgent(20710,0x10e612000) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerHelperAgent(20710,0x10e612000) malloc: *** error: can't allocate region securely
+PassengerHelperAgent(20710,0x10e612000) malloc: *** set a breakpoint in malloc_error_break to debug
+[ 2013-12-30 17:17:36.5535 21094/0x7fff7c7a6310 agents/Watchdog/Main.cpp:510 ]: Options: { 'analytics_log_user' => 'luizcarlos', 'cleanup_pidfiles' => 'L3Zhci9mb2xkZXJzLzkzL2NsemJoc3duNmw1OWNmMmQ2MjcxNjA5YzAwMDBnbi9UL3Bhc3Nlbmdlci1zdGFuZGFsb25lLjRuMGNrai90ZW1wX2Rpcl90b3VjaGVyLnBpZA==', 'default_group' => 'staff', 'default_python' => 'python', 'default_ruby' => '/Users/luizcarlos/.rbenv/versions/2.0.0-p353/bin/ruby', 'default_user' => 'luizcarlos', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/var/folders/93/clzbhswn6l59cf2d6271609c0000gn/T/passenger-standalone.4n0ckj/locations.ini', 'passenger_version' => '4.0.29', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.29', 'web_server_pid' => '21093', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2013-12-30 17:17:36.5757 21096/0x7fff7c7a6310 agents/HelperAgent/Main.cpp:625 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.21093/generation-0/request
+[ 2013-12-30 17:17:36.5835 21098/0x7fff7c7a6310 agents/LoggingAgent/Main.cpp:318 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.21093/generation-0/logging
+[ 2013-12-30 17:17:36.5838 21094/0x7fff7c7a6310 agents/Watchdog/Main.cpp:697 ]: All Phusion Passenger agents started!
+/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/passenger-4.0.29/helper-scripts/prespawn:105:in `initialize': Connection refused - connect(2) (Errno::ECONNREFUSED)
+	from /Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/passenger-4.0.29/helper-scripts/prespawn:105:in `new'
+	from /Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/passenger-4.0.29/helper-scripts/prespawn:105:in `connect'
+	from /Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/passenger-4.0.29/helper-scripts/prespawn:86:in `socket'
+	from /Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/passenger-4.0.29/helper-scripts/prespawn:90:in `head_request'
+	from /Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/passenger-4.0.29/helper-scripts/prespawn:145:in `<main>'
+[ 2013-12-30 17:17:59.3147 21228/0x7fff7c7a6310 agents/Watchdog/Main.cpp:510 ]: Options: { 'analytics_log_user' => 'luizcarlos', 'cleanup_pidfiles' => 'L3Zhci9mb2xkZXJzLzkzL2NsemJoc3duNmw1OWNmMmQ2MjcxNjA5YzAwMDBnbi9UL3Bhc3Nlbmdlci1zdGFuZGFsb25lLjE0a3NudHkvdGVtcF9kaXJfdG91Y2hlci5waWQ=', 'default_group' => 'staff', 'default_python' => 'python', 'default_ruby' => '/Users/luizcarlos/.rbenv/versions/2.0.0-p353/bin/ruby', 'default_user' => 'luizcarlos', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/var/folders/93/clzbhswn6l59cf2d6271609c0000gn/T/passenger-standalone.14ksnty/locations.ini', 'passenger_version' => '4.0.29', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.29', 'web_server_pid' => '21227', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2013-12-30 17:17:59.3452 21230/0x7fff7c7a6310 agents/HelperAgent/Main.cpp:625 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.21227/generation-0/request
+[ 2013-12-30 17:17:59.3577 21232/0x7fff7c7a6310 agents/LoggingAgent/Main.cpp:318 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.21227/generation-0/logging
+[ 2013-12-30 17:17:59.3580 21228/0x7fff7c7a6310 agents/Watchdog/Main.cpp:697 ]: All Phusion Passenger agents started!
+App 21284 stdout: 
+App 21284 stdout: can't find sidekiq gem
+[ 2013-12-30 17:18:05.1321 21230/0x107ae2000 Pool2/SmartSpawner.h:301 ]: Preloader for /Users/luizcarlos/Documents/workspace/nyhetis started on PID 21284, listening on unix:/tmp/passenger.1.0.21227/generation-0/backends/preloader.21284
+App 21354 stdout: invalid date
+App 21354 stdout: invalid date
+App 21354 stdout: invalid date
+App 21354 stdout: invalid date
+App 21354 stdout: invalid date
+App 21354 stdout: invalid date
+[ 2013-12-30 18:21:48.1833 50306/0x7fff7c7a6310 agents/Watchdog/Main.cpp:510 ]: Options: { 'analytics_log_user' => 'luizcarlos', 'cleanup_pidfiles' => 'L3Zhci9mb2xkZXJzLzkzL2NsemJoc3duNmw1OWNmMmQ2MjcxNjA5YzAwMDBnbi9UL3Bhc3Nlbmdlci1zdGFuZGFsb25lLjEwcTFoMXQvdGVtcF9kaXJfdG91Y2hlci5waWQ=', 'default_group' => 'staff', 'default_python' => 'python', 'default_ruby' => '/Users/luizcarlos/.rbenv/versions/2.0.0-p353/bin/ruby', 'default_user' => 'luizcarlos', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/var/folders/93/clzbhswn6l59cf2d6271609c0000gn/T/passenger-standalone.10q1h1t/locations.ini', 'passenger_version' => '4.0.29', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.29', 'web_server_pid' => '50305', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+PassengerWatchdog(50309,0x7fff7c7a6310) malloc: *** mach_vm_map(size=1048576) failed (error code=268435459)
+PassengerWatchdog(50309,0x7fff7c7a6310) malloc: *** error: can't allocate region securely
+PassengerWatchdog(50309,0x7fff7c7a6310) malloc: *** set a breakpoint in malloc_error_break to debug
+[ 2013-12-30 18:21:48.2214 50308/0x7fff7c7a6310 agents/HelperAgent/Main.cpp:625 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.50305/generation-0/request
+[ 2013-12-30 18:21:48.2422 50311/0x7fff7c7a6310 agents/LoggingAgent/Main.cpp:318 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.50305/generation-0/logging
+[ 2013-12-30 18:21:48.2513 50306/0x7fff7c7a6310 agents/Watchdog/Main.cpp:697 ]: All Phusion Passenger agents started!
+App 50332 stdout: 
+App 50332 stdout: can't find sidekiq gem
+[ 2013-12-30 18:22:11.0795 50308/0x101aa8000 Pool2/SmartSpawner.h:301 ]: Preloader for /Users/luizcarlos/Documents/workspace/nyhetis started on PID 50332, listening on unix:/tmp/passenger.1.0.50305/generation-0/backends/preloader.50332
+PassengerHelperAgent(50949,0x101832000) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerHelperAgent(50949,0x101832000) malloc: *** error: can't allocate region securely
+PassengerHelperAgent(50949,0x101832000) malloc: *** set a breakpoint in malloc_error_break to debug
+PassengerHelperAgent(50951,0x101832000) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerHelperAgent(50951,0x101832000) malloc: *** error: can't allocate region securely
+PassengerHelperAgent(50951,0x101832000) malloc: *** set a breakpoint in malloc_error_break to debug
+PassengerHelperAgent(50953,0x101832000) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerHelperAgent(50953,0x101832000) malloc: *** error: can't allocate region securely
+PassengerHelperAgent(50953,0x101832000) malloc: *** set a breakpoint in malloc_error_break to debug
+PassengerHelperAgent(50955,0x101832000) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerHelperAgent(50955,0x101832000) malloc: *** error: can't allocate region securely
+PassengerHelperAgent(50955,0x101832000) malloc: *** set a breakpoint in malloc_error_break to debug
+[ 2013-12-30 18:23:28.6486 51015/0x7fff7c7a6310 agents/Watchdog/Main.cpp:510 ]: Options: { 'analytics_log_user' => 'luizcarlos', 'cleanup_pidfiles' => 'L3Zhci9mb2xkZXJzLzkzL2NsemJoc3duNmw1OWNmMmQ2MjcxNjA5YzAwMDBnbi9UL3Bhc3Nlbmdlci1zdGFuZGFsb25lLjE3b2g3MmovdGVtcF9kaXJfdG91Y2hlci5waWQ=', 'default_group' => 'staff', 'default_python' => 'python', 'default_ruby' => '/Users/luizcarlos/.rbenv/versions/2.0.0-p353/bin/ruby', 'default_user' => 'luizcarlos', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/var/folders/93/clzbhswn6l59cf2d6271609c0000gn/T/passenger-standalone.17oh72j/locations.ini', 'passenger_version' => '4.0.29', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.29', 'web_server_pid' => '51014', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+PassengerWatchdog(51018,0x7fff7c7a6310) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerWatchdog(51018,0x7fff7c7a6310) malloc: *** error: can't allocate region securely
+PassengerWatchdog(51018,0x7fff7c7a6310) malloc: *** set a breakpoint in malloc_error_break to debug
+[ 2013-12-30 18:23:28.6750 51017/0x7fff7c7a6310 agents/HelperAgent/Main.cpp:625 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.51014/generation-0/request
+[ 2013-12-30 18:23:28.6842 51019/0x7fff7c7a6310 agents/LoggingAgent/Main.cpp:318 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.51014/generation-0/logging
+[ 2013-12-30 18:23:28.6845 51015/0x7fff7c7a6310 agents/Watchdog/Main.cpp:697 ]: All Phusion Passenger agents started!
+App 51031 stdout: 
+App 51031 stdout: can't find sidekiq gem
+[ 2013-12-30 18:23:32.7633 51017/0x109267000 Pool2/SmartSpawner.h:301 ]: Preloader for /Users/luizcarlos/Documents/workspace/nyhetis started on PID 51031, listening on unix:/tmp/passenger.1.0.51014/generation-0/backends/preloader.51031
+PassengerHelperAgent(51068,0x108ff1000) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerHelperAgent(51068,0x108ff1000) malloc: *** error: can't allocate region securely
+PassengerHelperAgent(51068,0x108ff1000) malloc: *** set a breakpoint in malloc_error_break to debug
+PassengerHelperAgent(51070,0x108ff1000) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerHelperAgent(51070,0x108ff1000) malloc: *** error: can't allocate region securely
+PassengerHelperAgent(51070,0x108ff1000) malloc: *** set a breakpoint in malloc_error_break to debug
+PassengerHelperAgent(51074,0x108ff1000) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerHelperAgent(51074,0x108ff1000) malloc: *** error: can't allocate region securely
+PassengerHelperAgent(51074,0x108ff1000) malloc: *** set a breakpoint in malloc_error_break to debug
+PassengerHelperAgent(51079,0x108ff1000) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerHelperAgent(51079,0x108ff1000) malloc: *** error: can't allocate region securely
+PassengerHelperAgent(51079,0x108ff1000) malloc: *** set a breakpoint in malloc_error_break to debug
+App 51064 stdout: invalid date
+App 51064 stdout: invalid date
+App 51064 stdout: invalid date
+App 51064 stdout: invalid date
+App 51064 stdout: invalid date
+[ 2013-12-30 18:35:59.3071 54547/0x7fff7c7a6310 agents/Watchdog/Main.cpp:510 ]: Options: { 'analytics_log_user' => 'luizcarlos', 'cleanup_pidfiles' => 'L3Zhci9mb2xkZXJzLzkzL2NsemJoc3duNmw1OWNmMmQ2MjcxNjA5YzAwMDBnbi9UL3Bhc3Nlbmdlci1zdGFuZGFsb25lLjFwdTM2bnUvdGVtcF9kaXJfdG91Y2hlci5waWQ=', 'default_group' => 'staff', 'default_python' => 'python', 'default_ruby' => '/Users/luizcarlos/.rbenv/versions/2.0.0-p353/bin/ruby', 'default_user' => 'luizcarlos', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/var/folders/93/clzbhswn6l59cf2d6271609c0000gn/T/passenger-standalone.1pu36nu/locations.ini', 'passenger_version' => '4.0.29', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.29', 'web_server_pid' => '54546', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2013-12-30 18:35:59.3234 54549/0x7fff7c7a6310 agents/HelperAgent/Main.cpp:625 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.54546/generation-0/request
+[ 2013-12-30 18:35:59.3337 54551/0x7fff7c7a6310 agents/LoggingAgent/Main.cpp:318 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.54546/generation-0/logging
+[ 2013-12-30 18:35:59.3340 54547/0x7fff7c7a6310 agents/Watchdog/Main.cpp:697 ]: All Phusion Passenger agents started!
+App 54563 stdout: 
+App 54563 stdout: can't find sidekiq gem
+[ 2013-12-30 18:36:03.1927 54549/0x104ac2000 Pool2/SmartSpawner.h:301 ]: Preloader for /Users/luizcarlos/Documents/workspace/nyhetis started on PID 54563, listening on unix:/tmp/passenger.1.0.54546/generation-0/backends/preloader.54563
+PassengerHelperAgent(54602,0x10484c000) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerHelperAgent(54602,0x10484c000) malloc: *** error: can't allocate region securely
+PassengerHelperAgent(54602,0x10484c000) malloc: *** set a breakpoint in malloc_error_break to debug
+App 54586 stdout: invalid date
+App 54586 stdout: invalid date
+App 54586 stdout: invalid date
+App 54586 stdout: invalid date
+App 54586 stdout: invalid date
+App 54586 stdout: invalid date
+App 54586 stdout: 
+App 54586 stdout: invalid date
+App 54586 stdout: invalid date
+App 54586 stdout: invalid date
+App 54586 stdout: invalid date
+App 54586 stdout: invalid date
+App 54586 stdout: invalid date
+App 54586 stdout: invalid date
+App 54586 stdout: invalid date
+[ 2013-12-31 20:35:03.2560 28050/0x7fff7c7a6310 agents/Watchdog/Main.cpp:510 ]: Options: { 'analytics_log_user' => 'luizcarlos', 'cleanup_pidfiles' => 'L3Zhci9mb2xkZXJzLzkzL2NsemJoc3duNmw1OWNmMmQ2MjcxNjA5YzAwMDBnbi9UL3Bhc3Nlbmdlci1zdGFuZGFsb25lLjRzMWwxai90ZW1wX2Rpcl90b3VjaGVyLnBpZA==', 'default_group' => 'staff', 'default_python' => 'python', 'default_ruby' => '/Users/luizcarlos/.rbenv/versions/2.0.0-p353/bin/ruby', 'default_user' => 'luizcarlos', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/var/folders/93/clzbhswn6l59cf2d6271609c0000gn/T/passenger-standalone.4s1l1j/locations.ini', 'passenger_version' => '4.0.29', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.29', 'web_server_pid' => '28049', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2013-12-31 20:35:03.2741 28052/0x7fff7c7a6310 agents/HelperAgent/Main.cpp:625 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.28049/generation-0/request
+[ 2013-12-31 20:35:03.2834 28054/0x7fff7c7a6310 agents/LoggingAgent/Main.cpp:318 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.28049/generation-0/logging
+[ 2013-12-31 20:35:03.2835 28050/0x7fff7c7a6310 agents/Watchdog/Main.cpp:697 ]: All Phusion Passenger agents started!
+App 28067 stdout: 
+App 28067 stdout: can't find sidekiq gem
+[ 2013-12-31 20:35:07.8383 28052/0x10be3f000 Pool2/SmartSpawner.h:301 ]: Preloader for /Users/luizcarlos/Documents/workspace/nyhetis started on PID 28067, listening on unix:/tmp/passenger.1.0.28049/generation-0/backends/preloader.28067
+[ 2014-01-01 06:54:36.5122 29878/0x7fff7c7a6310 agents/Watchdog/Main.cpp:510 ]: Options: { 'analytics_log_user' => 'luizcarlos', 'cleanup_pidfiles' => 'L3Zhci9mb2xkZXJzLzkzL2NsemJoc3duNmw1OWNmMmQ2MjcxNjA5YzAwMDBnbi9UL3Bhc3Nlbmdlci1zdGFuZGFsb25lLjFqamVkcmcvdGVtcF9kaXJfdG91Y2hlci5waWQ=', 'default_group' => 'staff', 'default_python' => 'python', 'default_ruby' => '/Users/luizcarlos/.rbenv/versions/2.0.0-p353/bin/ruby', 'default_user' => 'luizcarlos', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/var/folders/93/clzbhswn6l59cf2d6271609c0000gn/T/passenger-standalone.1jjedrg/locations.ini', 'passenger_version' => '4.0.29', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.29', 'web_server_pid' => '29877', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2014-01-01 06:54:36.5290 29880/0x7fff7c7a6310 agents/HelperAgent/Main.cpp:625 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.29877/generation-0/request
+[ 2014-01-01 06:54:36.5394 29882/0x7fff7c7a6310 agents/LoggingAgent/Main.cpp:318 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.29877/generation-0/logging
+[ 2014-01-01 06:54:36.5396 29878/0x7fff7c7a6310 agents/Watchdog/Main.cpp:697 ]: All Phusion Passenger agents started!
+App 29894 stdout: 
+App 29894 stdout: can't find sidekiq gem
+[ 2014-01-01 06:54:40.6697 29880/0x10e0ba000 Pool2/SmartSpawner.h:301 ]: Preloader for /Users/luizcarlos/Documents/workspace/nyhetis started on PID 29894, listening on unix:/tmp/passenger.1.0.29877/generation-0/backends/preloader.29894
+App 29917 stdout: invalid date
+App 29917 stdout: invalid date
+App 29917 stdout: invalid date
+App 29917 stdout: invalid date
+App 29917 stdout: invalid date
+App 29917 stdout: invalid date
+PassengerWatchdog (cleaning up...)(31073,0x7fff7c7a6310) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerWatchdog (cleaning up...)(31073,0x7fff7c7a6310) malloc: *** error: can't allocate region securely
+PassengerWatchdog (cleaning up...)(31073,0x7fff7c7a6310) malloc: *** set a breakpoint in malloc_error_break to debug
+[ 2014-01-01 22:44:06.2590 32364/0x7fff7c7a6310 agents/Watchdog/Main.cpp:510 ]: Options: { 'analytics_log_user' => 'luizcarlos', 'cleanup_pidfiles' => 'L3Zhci9mb2xkZXJzLzkzL2NsemJoc3duNmw1OWNmMmQ2MjcxNjA5YzAwMDBnbi9UL3Bhc3Nlbmdlci1zdGFuZGFsb25lLnpyb3g0dy90ZW1wX2Rpcl90b3VjaGVyLnBpZA==', 'default_group' => 'staff', 'default_python' => 'python', 'default_ruby' => '/Users/luizcarlos/.rbenv/versions/2.0.0-p353/bin/ruby', 'default_user' => 'luizcarlos', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/var/folders/93/clzbhswn6l59cf2d6271609c0000gn/T/passenger-standalone.zrox4w/locations.ini', 'passenger_version' => '4.0.29', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.29', 'web_server_pid' => '32363', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2014-01-01 22:44:06.3054 32366/0x7fff7c7a6310 agents/HelperAgent/Main.cpp:625 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.32363/generation-0/request
+[ 2014-01-01 22:44:06.3509 32368/0x7fff7c7a6310 agents/LoggingAgent/Main.cpp:318 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.32363/generation-0/logging
+[ 2014-01-01 22:44:06.3511 32364/0x7fff7c7a6310 agents/Watchdog/Main.cpp:697 ]: All Phusion Passenger agents started!
+App 32380 stdout: 
+App 32380 stdout: can't find sidekiq gem
+[ 2014-01-01 22:44:10.8126 32366/0x10f79b000 Pool2/SmartSpawner.h:301 ]: Preloader for /Users/luizcarlos/Documents/workspace/nyhetis started on PID 32380, listening on unix:/tmp/passenger.1.0.32363/generation-0/backends/preloader.32380
+App 32405 stdout: invalid date
+App 32405 stdout: invalid date
+[ 2014-01-02 04:45:18.6568 42355/0x7fff7c7a6310 agents/Watchdog/Main.cpp:510 ]: Options: { 'analytics_log_user' => 'luizcarlos', 'cleanup_pidfiles' => 'L3Zhci9mb2xkZXJzLzkzL2NsemJoc3duNmw1OWNmMmQ2MjcxNjA5YzAwMDBnbi9UL3Bhc3Nlbmdlci1zdGFuZGFsb25lLjd4bDBiZC90ZW1wX2Rpcl90b3VjaGVyLnBpZA==', 'default_group' => 'staff', 'default_python' => 'python', 'default_ruby' => '/Users/luizcarlos/.rbenv/versions/2.0.0-p353/bin/ruby', 'default_user' => 'luizcarlos', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/var/folders/93/clzbhswn6l59cf2d6271609c0000gn/T/passenger-standalone.7xl0bd/locations.ini', 'passenger_version' => '4.0.29', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.29', 'web_server_pid' => '42354', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2014-01-02 04:45:18.6757 42357/0x7fff7c7a6310 agents/HelperAgent/Main.cpp:625 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.42354/generation-0/request
+[ 2014-01-02 04:45:18.6853 42359/0x7fff7c7a6310 agents/LoggingAgent/Main.cpp:318 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.42354/generation-0/logging
+[ 2014-01-02 04:45:18.6855 42355/0x7fff7c7a6310 agents/Watchdog/Main.cpp:697 ]: All Phusion Passenger agents started!
+App 42371 stdout: 
+App 42371 stdout: can't find sidekiq gem
+[ 2014-01-02 04:45:22.8378 42357/0x104e86000 Pool2/SmartSpawner.h:301 ]: Preloader for /Users/luizcarlos/Documents/workspace/nyhetis started on PID 42371, listening on unix:/tmp/passenger.1.0.42354/generation-0/backends/preloader.42371
+[ 2014-01-02 04:45:38.7748 42470/0x7fff7c7a6310 agents/Watchdog/Main.cpp:510 ]: Options: { 'analytics_log_user' => 'luizcarlos', 'cleanup_pidfiles' => 'L3Zhci9mb2xkZXJzLzkzL2NsemJoc3duNmw1OWNmMmQ2MjcxNjA5YzAwMDBnbi9UL3Bhc3Nlbmdlci1zdGFuZGFsb25lLjF1NDlsYncvdGVtcF9kaXJfdG91Y2hlci5waWQ=', 'default_group' => 'staff', 'default_python' => 'python', 'default_ruby' => '/Users/luizcarlos/.rbenv/versions/2.0.0-p353/bin/ruby', 'default_user' => 'luizcarlos', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/var/folders/93/clzbhswn6l59cf2d6271609c0000gn/T/passenger-standalone.1u49lbw/locations.ini', 'passenger_version' => '4.0.29', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.29', 'web_server_pid' => '42469', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2014-01-02 04:45:38.7931 42472/0x7fff7c7a6310 agents/HelperAgent/Main.cpp:625 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.42469/generation-0/request
+[ 2014-01-02 04:45:38.7994 42474/0x7fff7c7a6310 agents/LoggingAgent/Main.cpp:318 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.42469/generation-0/logging
+[ 2014-01-02 04:45:38.7996 42470/0x7fff7c7a6310 agents/Watchdog/Main.cpp:697 ]: All Phusion Passenger agents started!
+App 42486 stdout: 
+App 42486 stdout: can't find sidekiq gem
+[ 2014-01-02 04:45:42.4146 42472/0x10eabe000 Pool2/SmartSpawner.h:301 ]: Preloader for /Users/luizcarlos/Documents/workspace/nyhetis started on PID 42486, listening on unix:/tmp/passenger.1.0.42469/generation-0/backends/preloader.42486
+[ 2014-01-02 04:46:01.9424 42597/0x7fff7c7a6310 agents/Watchdog/Main.cpp:510 ]: Options: { 'analytics_log_user' => 'luizcarlos', 'cleanup_pidfiles' => 'L3Zhci9mb2xkZXJzLzkzL2NsemJoc3duNmw1OWNmMmQ2MjcxNjA5YzAwMDBnbi9UL3Bhc3Nlbmdlci1zdGFuZGFsb25lLnI0eTVsZS90ZW1wX2Rpcl90b3VjaGVyLnBpZA==', 'default_group' => 'staff', 'default_python' => 'python', 'default_ruby' => '/Users/luizcarlos/.rbenv/versions/2.0.0-p353/bin/ruby', 'default_user' => 'luizcarlos', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/var/folders/93/clzbhswn6l59cf2d6271609c0000gn/T/passenger-standalone.r4y5le/locations.ini', 'passenger_version' => '4.0.29', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.29', 'web_server_pid' => '42596', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2014-01-02 04:46:01.9581 42599/0x7fff7c7a6310 agents/HelperAgent/Main.cpp:625 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.42596/generation-0/request
+[ 2014-01-02 04:46:01.9651 42601/0x7fff7c7a6310 agents/LoggingAgent/Main.cpp:318 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.42596/generation-0/logging
+[ 2014-01-02 04:46:01.9653 42597/0x7fff7c7a6310 agents/Watchdog/Main.cpp:697 ]: All Phusion Passenger agents started!
+App 42613 stdout: 
+App 42613 stdout: can't find sidekiq gem
+[ 2014-01-02 04:46:05.4909 42599/0x10e847000 Pool2/SmartSpawner.h:301 ]: Preloader for /Users/luizcarlos/Documents/workspace/nyhetis started on PID 42613, listening on unix:/tmp/passenger.1.0.42596/generation-0/backends/preloader.42613
+[ 2014-01-02 04:52:15.2053 43063/0x7fff7c7a6310 agents/Watchdog/Main.cpp:510 ]: Options: { 'analytics_log_user' => 'luizcarlos', 'cleanup_pidfiles' => 'L3Zhci9mb2xkZXJzLzkzL2NsemJoc3duNmw1OWNmMmQ2MjcxNjA5YzAwMDBnbi9UL3Bhc3Nlbmdlci1zdGFuZGFsb25lLmtxejFkOS90ZW1wX2Rpcl90b3VjaGVyLnBpZA==', 'default_group' => 'staff', 'default_python' => 'python', 'default_ruby' => '/Users/luizcarlos/.rbenv/versions/2.0.0-p353/bin/ruby', 'default_user' => 'luizcarlos', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/var/folders/93/clzbhswn6l59cf2d6271609c0000gn/T/passenger-standalone.kqz1d9/locations.ini', 'passenger_version' => '4.0.29', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.29', 'web_server_pid' => '43062', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+PassengerWatchdog(43066,0x7fff7c7a6310) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerWatchdog(43066,0x7fff7c7a6310) malloc: *** error: can't allocate region securely
+PassengerWatchdog(43066,0x7fff7c7a6310) malloc: *** set a breakpoint in malloc_error_break to debug
+[ 2014-01-02 04:52:15.2221 43065/0x7fff7c7a6310 agents/HelperAgent/Main.cpp:625 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.43062/generation-0/request
+[ 2014-01-02 04:52:15.2287 43067/0x7fff7c7a6310 agents/LoggingAgent/Main.cpp:318 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.43062/generation-0/logging
+[ 2014-01-02 04:52:15.2290 43063/0x7fff7c7a6310 agents/Watchdog/Main.cpp:697 ]: All Phusion Passenger agents started!
+App 43079 stdout: 
+App 43079 stdout: can't find sidekiq gem
+[ 2014-01-02 04:52:18.7387 43065/0x10dea5000 Pool2/SmartSpawner.h:301 ]: Preloader for /Users/luizcarlos/Documents/workspace/nyhetis started on PID 43079, listening on unix:/tmp/passenger.1.0.43062/generation-0/backends/preloader.43079
+PassengerWatchdog (cleaning up...)(43106,0x7fff7c7a6310) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerWatchdog (cleaning up...)(43106,0x7fff7c7a6310) malloc: *** error: can't allocate region securely
+PassengerWatchdog (cleaning up...)(43106,0x7fff7c7a6310) malloc: *** set a breakpoint in malloc_error_break to debug
+PassengerWatchdog (cleaning up...)(43110,0x7fff7c7a6310) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerWatchdog (cleaning up...)(43110,0x7fff7c7a6310) malloc: *** error: can't allocate region securely
+PassengerWatchdog (cleaning up...)(43110,0x7fff7c7a6310) malloc: *** set a breakpoint in malloc_error_break to debug
+[ 2014-01-02 05:49:15.0242 46470/0x7fff7c7a6310 agents/Watchdog/Main.cpp:510 ]: Options: { 'analytics_log_user' => 'luizcarlos', 'cleanup_pidfiles' => 'L3Zhci9mb2xkZXJzLzkzL2NsemJoc3duNmw1OWNmMmQ2MjcxNjA5YzAwMDBnbi9UL3Bhc3Nlbmdlci1zdGFuZGFsb25lLmlzN2c5Ny90ZW1wX2Rpcl90b3VjaGVyLnBpZA==', 'default_group' => 'staff', 'default_python' => 'python', 'default_ruby' => '/Users/luizcarlos/.rbenv/versions/2.0.0-p353/bin/ruby', 'default_user' => 'luizcarlos', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/var/folders/93/clzbhswn6l59cf2d6271609c0000gn/T/passenger-standalone.is7g97/locations.ini', 'passenger_version' => '4.0.29', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.29', 'web_server_pid' => '46469', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+PassengerWatchdog(46473,0x7fff7c7a6310) malloc: *** mach_vm_map(size=1048576) failed (error code=268435459)
+PassengerWatchdog(46473,0x7fff7c7a6310) malloc: *** error: can't allocate region securely
+PassengerWatchdog(46473,0x7fff7c7a6310) malloc: *** set a breakpoint in malloc_error_break to debug
+PassengerWatchdog(46473,0x7fff7c7a6310) malloc: *** mach_vm_map(size=1048576) failed (error code=268435459)
+PassengerWatchdog(46473,0x7fff7c7a6310) malloc: *** error: can't allocate region securely
+PassengerWatchdog(46473,0x7fff7c7a6310) malloc: *** set a breakpoint in malloc_error_break to debug
+PassengerWatchdog(46473,0x7fff7c7a6310) malloc: *** mach_vm_map(size=1048576) failed (error code=268435459)
+PassengerWatchdog(46473,0x7fff7c7a6310) malloc: *** error: can't allocate region securely
+PassengerWatchdog(46473,0x7fff7c7a6310) malloc: *** set a breakpoint in malloc_error_break to debug
+libc++abi.dylib: cannot allocate __cxa_eh_globals
+PassengerWatchdog(46473,0x7fff7c7a6310) malloc: *** mach_vm_map(size=1048576) failed (error code=268435459)
+PassengerWatchdog(46473,0x7fff7c7a6310) malloc: *** error: can't allocate region securely
+PassengerWatchdog(46473,0x7fff7c7a6310) malloc: *** set a breakpoint in malloc_error_break to debug
+[ 2014-01-02 05:49:15.0688 46472/0x7fff7c7a6310 agents/HelperAgent/Main.cpp:625 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.46469/generation-0/request
+[ 2014-01-02 05:49:15.1005 46474/0x7fff7c7a6310 agents/LoggingAgent/Main.cpp:318 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.46469/generation-0/logging
+[ 2014-01-02 05:49:15.1007 46470/0x7fff7c7a6310 agents/Watchdog/Main.cpp:697 ]: All Phusion Passenger agents started!
+App 46486 stdout: 
+[ 2014-01-02 05:49:17.8186 46472/0x102005000 Pool2/Implementation.cpp:869 ]: Could not spawn process for group /Users/luizcarlos/Documents/workspace/nyhetis#default: An error occured while starting up the preloader.
+     in 'void Passenger::ApplicationPool2::SmartSpawner::handleErrorResponse(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:455)
+     in 'string Passenger::ApplicationPool2::SmartSpawner::negotiatePreloaderStartup(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:566)
+     in 'void Passenger::ApplicationPool2::SmartSpawner::startPreloader()' (SmartSpawner.h:206)
+     in 'virtual ProcessPtr Passenger::ApplicationPool2::SmartSpawner::spawn(const Passenger::ApplicationPool2::Options &)' (SmartSpawner.h:752)
+     in 'void Passenger::ApplicationPool2::Group::spawnThreadRealMain(const SpawnerPtr &, const Passenger::ApplicationPool2::Options &, unsigned int)' (Implementation.cpp:802)
+
+[ 2014-01-02 05:49:17.8187 46472/0x101f7f000 agents/HelperAgent/RequestHandler.h:2060 ]: [Client 29] Cannot checkout session.
+Error page:
+cannot load such file -- dossier.rb (LoadError)
+  config.ru:1:in `require'
+  config.ru:1:in `block in <main>'
+  /Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/builder.rb:55:in `instance_eval'
+  /Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/builder.rb:55:in `initialize'
+  config.ru:1:in `new'
+  config.ru:1:in `<main>'
+  /Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/passenger-4.0.29/helper-scripts/rack-preloader.rb:108:in `eval'
+  /Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/passenger-4.0.29/helper-scripts/rack-preloader.rb:108:in `preload_app'
+  /Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/passenger-4.0.29/helper-scripts/rack-preloader.rb:153:in `<module:App>'
+  /Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/passenger-4.0.29/helper-scripts/rack-preloader.rb:29:in `<module:PhusionPassenger>'
+  /Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/passenger-4.0.29/helper-scripts/rack-preloader.rb:28:in `<main>'
+
+PassengerWatchdog (cleaning up...)(46526,0x7fff7c7a6310) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerWatchdog (cleaning up...)(46526,0x7fff7c7a6310) malloc: *** error: can't allocate region securely
+PassengerWatchdog (cleaning up...)(46526,0x7fff7c7a6310) malloc: *** set a breakpoint in malloc_error_break to debug
+[ 2014-01-02 05:49:30.8610 46572/0x7fff7c7a6310 agents/Watchdog/Main.cpp:510 ]: Options: { 'analytics_log_user' => 'luizcarlos', 'cleanup_pidfiles' => 'L3Zhci9mb2xkZXJzLzkzL2NsemJoc3duNmw1OWNmMmQ2MjcxNjA5YzAwMDBnbi9UL3Bhc3Nlbmdlci1zdGFuZGFsb25lLjFwNjNmc2YvdGVtcF9kaXJfdG91Y2hlci5waWQ=', 'default_group' => 'staff', 'default_python' => 'python', 'default_ruby' => '/Users/luizcarlos/.rbenv/versions/2.0.0-p353/bin/ruby', 'default_user' => 'luizcarlos', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/var/folders/93/clzbhswn6l59cf2d6271609c0000gn/T/passenger-standalone.1p63fsf/locations.ini', 'passenger_version' => '4.0.29', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.29', 'web_server_pid' => '46571', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2014-01-02 05:49:30.8771 46574/0x7fff7c7a6310 agents/HelperAgent/Main.cpp:625 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.46571/generation-0/request
+[ 2014-01-02 05:49:30.8837 46576/0x7fff7c7a6310 agents/LoggingAgent/Main.cpp:318 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.46571/generation-0/logging
+[ 2014-01-02 05:49:30.8839 46572/0x7fff7c7a6310 agents/Watchdog/Main.cpp:697 ]: All Phusion Passenger agents started!
+App 46589 stdout: 
+[ 2014-01-02 05:49:33.4821 46574/0x10e483000 Pool2/Implementation.cpp:869 ]: Could not spawn process for group /Users/luizcarlos/Documents/workspace/nyhetis#default: An error occured while starting up the preloader.
+     in 'void Passenger::ApplicationPool2::SmartSpawner::handleErrorResponse(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:455)
+     in 'string Passenger::ApplicationPool2::SmartSpawner::negotiatePreloaderStartup(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:566)
+     in 'void Passenger::ApplicationPool2::SmartSpawner::startPreloader()' (SmartSpawner.h:206)
+     in 'virtual ProcessPtr Passenger::ApplicationPool2::SmartSpawner::spawn(const Passenger::ApplicationPool2::Options &)' (SmartSpawner.h:752)
+     in 'void Passenger::ApplicationPool2::Group::spawnThreadRealMain(const SpawnerPtr &, const Passenger::ApplicationPool2::Options &, unsigned int)' (Implementation.cpp:802)
+
+[ 2014-01-02 05:49:33.4822 46574/0x10e3fd000 agents/HelperAgent/RequestHandler.h:2060 ]: [Client 21] Cannot checkout session.
+Error page:
+cannot load such file -- dossier (LoadError)
+  config.ru:1:in `require'
+  config.ru:1:in `block in <main>'
+  /Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/builder.rb:55:in `instance_eval'
+  /Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/builder.rb:55:in `initialize'
+  config.ru:1:in `new'
+  config.ru:1:in `<main>'
+  /Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/passenger-4.0.29/helper-scripts/rack-preloader.rb:108:in `eval'
+  /Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/passenger-4.0.29/helper-scripts/rack-preloader.rb:108:in `preload_app'
+  /Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/passenger-4.0.29/helper-scripts/rack-preloader.rb:153:in `<module:App>'
+  /Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/passenger-4.0.29/helper-scripts/rack-preloader.rb:29:in `<module:PhusionPassenger>'
+  /Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/passenger-4.0.29/helper-scripts/rack-preloader.rb:28:in `<main>'
+
+[ 2014-01-02 05:54:20.2224 46920/0x7fff7c7a6310 agents/Watchdog/Main.cpp:510 ]: Options: { 'analytics_log_user' => 'luizcarlos', 'cleanup_pidfiles' => 'L3Zhci9mb2xkZXJzLzkzL2NsemJoc3duNmw1OWNmMmQ2MjcxNjA5YzAwMDBnbi9UL3Bhc3Nlbmdlci1zdGFuZGFsb25lLjFub29icG0vdGVtcF9kaXJfdG91Y2hlci5waWQ=', 'default_group' => 'staff', 'default_python' => 'python', 'default_ruby' => '/Users/luizcarlos/.rbenv/versions/2.0.0-p353/bin/ruby', 'default_user' => 'luizcarlos', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/var/folders/93/clzbhswn6l59cf2d6271609c0000gn/T/passenger-standalone.1noobpm/locations.ini', 'passenger_version' => '4.0.29', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.29', 'web_server_pid' => '46919', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2014-01-02 05:54:20.2799 46922/0x7fff7c7a6310 agents/HelperAgent/Main.cpp:625 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.46919/generation-0/request
+[ 2014-01-02 05:54:20.3348 46924/0x7fff7c7a6310 agents/LoggingAgent/Main.cpp:318 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.46919/generation-0/logging
+[ 2014-01-02 05:54:20.3351 46920/0x7fff7c7a6310 agents/Watchdog/Main.cpp:697 ]: All Phusion Passenger agents started!
+App 46936 stdout: 
+[ 2014-01-02 05:54:22.8119 46922/0x10b742000 Pool2/Implementation.cpp:869 ]: Could not spawn process for group /Users/luizcarlos/Documents/workspace/nyhetis#default: An error occured while starting up the preloader.
+     in 'void Passenger::ApplicationPool2::SmartSpawner::handleErrorResponse(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:455)
+     in 'string Passenger::ApplicationPool2::SmartSpawner::negotiatePreloaderStartup(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:566)
+     in 'void Passenger::ApplicationPool2::SmartSpawner::startPreloader()' (SmartSpawner.h:206)
+     in 'virtual ProcessPtr Passenger::ApplicationPool2::SmartSpawner::spawn(const Passenger::ApplicationPool2::Options &)' (SmartSpawner.h:752)
+     in 'void Passenger::ApplicationPool2::Group::spawnThreadRealMain(const SpawnerPtr &, const Passenger::ApplicationPool2::Options &, unsigned int)' (Implementation.cpp:802)
+
+[ 2014-01-02 05:54:22.8121 46922/0x10b6bc000 agents/HelperAgent/RequestHandler.h:2060 ]: [Client 21] Cannot checkout session.
+Error page:
+The path `/Users/luizcarlos/Documents/workspace/cobweb` does not exist. (Bundler::PathError)
+  /Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/bundler-1.3.5/lib/bundler/source/path.rb:143:in `load_spec_files'
+  /Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/bundler-1.3.5/lib/bundler/source/path.rb:86:in `local_specs'
+  /Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/bundler-1.3.5/lib/bundler/source/path.rb:93:in `specs'
+  /Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/bundler-1.3.5/lib/bundler/definition.rb:493:in `block in converge_locked_specs'
+  /Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/bundler-1.3.5/lib/bundler/definition.rb:482:in `each'
+  /Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/bundler-1.3.5/lib/bundler/definition.rb:482:in `converge_locked_specs'
+  /Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/bundler-1.3.5/lib/bundler/definition.rb:167:in `resolve'
+  /Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/bundler-1.3.5/lib/bundler/definition.rb:114:in `specs'
+  /Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/bundler-1.3.5/lib/bundler/definition.rb:159:in `specs_for'
+  /Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/bundler-1.3.5/lib/bundler/definition.rb:148:in `requested_specs'
+  /Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/bundler-1.3.5/lib/bundler/environment.rb:18:in `requested_specs'
+  /Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/bundler-1.3.5/lib/bundler/runtime.rb:13:in `setup'
+  /Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/bundler-1.3.5/lib/bundler.rb:120:in `setup'
+  /Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/bundler-1.3.5/lib/bundler/setup.rb:17:in `<top (required)>'
+  /Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:118:in `require'
+  /Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:118:in `rescue in require'
+  /Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:124:in `require'
+  /Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/passenger-4.0.29/lib/phusion_passenger/loader_shared_helpers.rb:219:in `block in run_load_path_setup_code'
+  /Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/passenger-4.0.29/lib/phusion_passenger/loader_shared_helpers.rb:333:in `running_bundler'
+  /Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/passenger-4.0.29/lib/phusion_passenger/loader_shared_helpers.rb:217:in `run_load_path_setup_code'
+  /Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/passenger-4.0.29/helper-scripts/rack-preloader.rb:96:in `preload_app'
+  /Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/passenger-4.0.29/helper-scripts/rack-preloader.rb:153:in `<module:App>'
+  /Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/passenger-4.0.29/helper-scripts/rack-preloader.rb:29:in `<module:PhusionPassenger>'
+  /Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/passenger-4.0.29/helper-scripts/rack-preloader.rb:28:in `<main>'
+
+[ 2014-01-02 05:56:28.9362 47578/0x7fff7c7a6310 agents/Watchdog/Main.cpp:510 ]: Options: { 'analytics_log_user' => 'luizcarlos', 'cleanup_pidfiles' => 'L3Zhci9mb2xkZXJzLzkzL2NsemJoc3duNmw1OWNmMmQ2MjcxNjA5YzAwMDBnbi9UL3Bhc3Nlbmdlci1zdGFuZGFsb25lLjFzYXRkaWkvdGVtcF9kaXJfdG91Y2hlci5waWQ=', 'default_group' => 'staff', 'default_python' => 'python', 'default_ruby' => '/Users/luizcarlos/.rbenv/versions/2.0.0-p353/bin/ruby', 'default_user' => 'luizcarlos', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/var/folders/93/clzbhswn6l59cf2d6271609c0000gn/T/passenger-standalone.1satdii/locations.ini', 'passenger_version' => '4.0.29', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.29', 'web_server_pid' => '47577', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2014-01-02 05:56:28.9534 47580/0x7fff7c7a6310 agents/HelperAgent/Main.cpp:625 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.47577/generation-0/request
+[ 2014-01-02 05:56:28.9601 47582/0x7fff7c7a6310 agents/LoggingAgent/Main.cpp:318 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.47577/generation-0/logging
+[ 2014-01-02 05:56:28.9603 47578/0x7fff7c7a6310 agents/Watchdog/Main.cpp:697 ]: All Phusion Passenger agents started!
+App 47594 stdout: 
+App 47594 stdout: can't find sidekiq gem
+[ 2014-01-02 05:56:32.8934 47580/0x10cf0e000 Pool2/SmartSpawner.h:301 ]: Preloader for /Users/luizcarlos/Documents/workspace/nyhetis started on PID 47594, listening on unix:/tmp/passenger.1.0.47577/generation-0/backends/preloader.47594
+[ 2014-01-02 13:39:50.1664 48441/0x7fff7c7a6310 agents/Watchdog/Main.cpp:510 ]: Options: { 'analytics_log_user' => 'luizcarlos', 'cleanup_pidfiles' => 'L3Zhci9mb2xkZXJzLzkzL2NsemJoc3duNmw1OWNmMmQ2MjcxNjA5YzAwMDBnbi9UL3Bhc3Nlbmdlci1zdGFuZGFsb25lLnprNnJvMC90ZW1wX2Rpcl90b3VjaGVyLnBpZA==', 'default_group' => 'staff', 'default_python' => 'python', 'default_ruby' => '/Users/luizcarlos/.rbenv/versions/2.0.0-p353/bin/ruby', 'default_user' => 'luizcarlos', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/var/folders/93/clzbhswn6l59cf2d6271609c0000gn/T/passenger-standalone.zk6ro0/locations.ini', 'passenger_version' => '4.0.29', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.29', 'web_server_pid' => '48440', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2014-01-02 13:39:50.2076 48443/0x7fff7c7a6310 agents/HelperAgent/Main.cpp:625 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.48440/generation-0/request
+[ 2014-01-02 13:39:50.2413 48445/0x7fff7c7a6310 agents/LoggingAgent/Main.cpp:318 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.48440/generation-0/logging
+[ 2014-01-02 13:39:50.2415 48441/0x7fff7c7a6310 agents/Watchdog/Main.cpp:697 ]: All Phusion Passenger agents started!
+App 48457 stdout: 
+App 48457 stdout: can't find sidekiq gem
+[ 2014-01-02 13:39:54.3519 48443/0x10f441000 Pool2/SmartSpawner.h:301 ]: Preloader for /Users/luizcarlos/Documents/workspace/nyhetis started on PID 48457, listening on unix:/tmp/passenger.1.0.48440/generation-0/backends/preloader.48457
+[ 2014-01-02 14:25:45.0892 50098/0x7fff7c7a6310 agents/Watchdog/Main.cpp:510 ]: Options: { 'analytics_log_user' => 'luizcarlos', 'cleanup_pidfiles' => 'L3Zhci9mb2xkZXJzLzkzL2NsemJoc3duNmw1OWNmMmQ2MjcxNjA5YzAwMDBnbi9UL3Bhc3Nlbmdlci1zdGFuZGFsb25lLjFvOHYyZTAvdGVtcF9kaXJfdG91Y2hlci5waWQ=', 'default_group' => 'staff', 'default_python' => 'python', 'default_ruby' => '/Users/luizcarlos/.rbenv/versions/2.0.0-p353/bin/ruby', 'default_user' => 'luizcarlos', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/var/folders/93/clzbhswn6l59cf2d6271609c0000gn/T/passenger-standalone.1o8v2e0/locations.ini', 'passenger_version' => '4.0.29', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.29', 'web_server_pid' => '50097', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2014-01-02 14:25:45.1055 50100/0x7fff7c7a6310 agents/HelperAgent/Main.cpp:625 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.50097/generation-0/request
+[ 2014-01-02 14:25:45.1121 50102/0x7fff7c7a6310 agents/LoggingAgent/Main.cpp:318 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.50097/generation-0/logging
+[ 2014-01-02 14:25:45.1122 50098/0x7fff7c7a6310 agents/Watchdog/Main.cpp:697 ]: All Phusion Passenger agents started!
+App 50115 stdout: 
+App 50115 stdout: can't find sidekiq gem
+[ 2014-01-02 14:25:48.7162 50100/0x10e30f000 Pool2/SmartSpawner.h:301 ]: Preloader for /Users/luizcarlos/Documents/workspace/nyhetis started on PID 50115, listening on unix:/tmp/passenger.1.0.50097/generation-0/backends/preloader.50115
+PassengerHelperAgent(50645,0x10e099000) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerHelperAgent(50645,0x10e099000) malloc: *** error: can't allocate region securely
+PassengerHelperAgent(50645,0x10e099000) malloc: *** set a breakpoint in malloc_error_break to debug
+PassengerHelperAgent(50885,0x10e099000) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerHelperAgent(50885,0x10e099000) malloc: *** error: can't allocate region securely
+PassengerHelperAgent(50885,0x10e099000) malloc: *** set a breakpoint in malloc_error_break to debug
+PassengerHelperAgent(51292,0x10e099000) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerHelperAgent(51292,0x10e099000) malloc: *** error: can't allocate region securely
+PassengerHelperAgent(51292,0x10e099000) malloc: *** set a breakpoint in malloc_error_break to debug
+PassengerHelperAgent(51479,0x10e099000) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerHelperAgent(51479,0x10e099000) malloc: *** error: can't allocate region securely
+PassengerHelperAgent(51479,0x10e099000) malloc: *** set a breakpoint in malloc_error_break to debug
+PassengerHelperAgent(51569,0x10e099000) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerHelperAgent(51569,0x10e099000) malloc: *** error: can't allocate region securely
+PassengerHelperAgent(51569,0x10e099000) malloc: *** set a breakpoint in malloc_error_break to debug
+PassengerHelperAgent(51982,0x10e099000) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerHelperAgent(51982,0x10e099000) malloc: *** error: can't allocate region securely
+PassengerHelperAgent(51982,0x10e099000) malloc: *** set a breakpoint in malloc_error_break to debug
+PassengerHelperAgent(52026,0x10e099000) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerHelperAgent(52026,0x10e099000) malloc: *** error: can't allocate region securely
+PassengerHelperAgent(52026,0x10e099000) malloc: *** set a breakpoint in malloc_error_break to debug
+App 50138 stdout: invalid date
+PassengerHelperAgent(52919,0x10e099000) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerHelperAgent(52919,0x10e099000) malloc: *** error: can't allocate region securely
+PassengerHelperAgent(52919,0x10e099000) malloc: *** set a breakpoint in malloc_error_break to debug
+PassengerHelperAgent(53072,0x10e099000) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerHelperAgent(53072,0x10e099000) malloc: *** error: can't allocate region securely
+PassengerHelperAgent(53072,0x10e099000) malloc: *** set a breakpoint in malloc_error_break to debug
+PassengerHelperAgent(53242,0x10e099000) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerHelperAgent(53242,0x10e099000) malloc: *** error: can't allocate region securely
+PassengerHelperAgent(53242,0x10e099000) malloc: *** set a breakpoint in malloc_error_break to debug
+PassengerHelperAgent(53427,0x10e099000) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerHelperAgent(53427,0x10e099000) malloc: *** error: can't allocate region securely
+PassengerHelperAgent(53427,0x10e099000) malloc: *** set a breakpoint in malloc_error_break to debug
+PassengerHelperAgent(53463,0x10e099000) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerHelperAgent(53463,0x10e099000) malloc: *** error: can't allocate region securely
+PassengerHelperAgent(53463,0x10e099000) malloc: *** set a breakpoint in malloc_error_break to debug
+PassengerHelperAgent(53607,0x10e099000) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerHelperAgent(53607,0x10e099000) malloc: *** error: can't allocate region securely
+PassengerHelperAgent(53607,0x10e099000) malloc: *** set a breakpoint in malloc_error_break to debug
+PassengerHelperAgent(53627,0x10e099000) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerHelperAgent(53627,0x10e099000) malloc: *** error: can't allocate region securely
+PassengerHelperAgent(53627,0x10e099000) malloc: *** set a breakpoint in malloc_error_break to debug
+PassengerHelperAgent(53977,0x10e099000) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerHelperAgent(53977,0x10e099000) malloc: *** error: can't allocate region securely
+PassengerHelperAgent(53977,0x10e099000) malloc: *** set a breakpoint in malloc_error_break to debug
+PassengerHelperAgent(54016,0x10e099000) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerHelperAgent(54016,0x10e099000) malloc: *** error: can't allocate region securely
+PassengerHelperAgent(54016,0x10e099000) malloc: *** set a breakpoint in malloc_error_break to debug
+PassengerHelperAgent(54182,0x10e099000) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerHelperAgent(54182,0x10e099000) malloc: *** error: can't allocate region securely
+PassengerHelperAgent(54182,0x10e099000) malloc: *** set a breakpoint in malloc_error_break to debug
+PassengerHelperAgent(54209,0x10e099000) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerHelperAgent(54209,0x10e099000) malloc: *** error: can't allocate region securely
+PassengerHelperAgent(54209,0x10e099000) malloc: *** set a breakpoint in malloc_error_break to debug
+PassengerHelperAgent(54230,0x10e099000) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerHelperAgent(54230,0x10e099000) malloc: *** error: can't allocate region securely
+PassengerHelperAgent(54230,0x10e099000) malloc: *** set a breakpoint in malloc_error_break to debug
+PassengerHelperAgent(54648,0x10e099000) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerHelperAgent(54648,0x10e099000) malloc: *** error: can't allocate region securely
+PassengerHelperAgent(54648,0x10e099000) malloc: *** set a breakpoint in malloc_error_break to debug
+PassengerHelperAgent(54821,0x10e099000) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerHelperAgent(54821,0x10e099000) malloc: *** error: can't allocate region securely
+PassengerHelperAgent(54821,0x10e099000) malloc: *** set a breakpoint in malloc_error_break to debug
+PassengerHelperAgent(54940,0x10e099000) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerHelperAgent(54940,0x10e099000) malloc: *** error: can't allocate region securely
+PassengerHelperAgent(54940,0x10e099000) malloc: *** set a breakpoint in malloc_error_break to debug
+PassengerHelperAgent(54978,0x10e099000) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerHelperAgent(54978,0x10e099000) malloc: *** error: can't allocate region securely
+PassengerHelperAgent(54978,0x10e099000) malloc: *** set a breakpoint in malloc_error_break to debug
+PassengerHelperAgent(55515,0x10e099000) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerHelperAgent(55515,0x10e099000) malloc: *** error: can't allocate region securely
+PassengerHelperAgent(55515,0x10e099000) malloc: *** set a breakpoint in malloc_error_break to debug
+PassengerHelperAgent(55815,0x10e099000) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerHelperAgent(55815,0x10e099000) malloc: *** error: can't allocate region securely
+PassengerHelperAgent(55815,0x10e099000) malloc: *** set a breakpoint in malloc_error_break to debug
+PassengerHelperAgent(56353,0x10e099000) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerHelperAgent(56353,0x10e099000) malloc: *** error: can't allocate region securely
+PassengerHelperAgent(56353,0x10e099000) malloc: *** set a breakpoint in malloc_error_break to debug
+PassengerHelperAgent(56739,0x10e099000) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerHelperAgent(56739,0x10e099000) malloc: *** error: can't allocate region securely
+PassengerHelperAgent(56739,0x10e099000) malloc: *** set a breakpoint in malloc_error_break to debug
+PassengerHelperAgent(57082,0x10e099000) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerHelperAgent(57082,0x10e099000) malloc: *** error: can't allocate region securely
+PassengerHelperAgent(57082,0x10e099000) malloc: *** set a breakpoint in malloc_error_break to debug
+PassengerHelperAgent(57763,0x10e099000) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerHelperAgent(57763,0x10e099000) malloc: *** error: can't allocate region securely
+PassengerHelperAgent(57763,0x10e099000) malloc: *** set a breakpoint in malloc_error_break to debug
+PassengerHelperAgent(57869,0x10e099000) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerHelperAgent(57869,0x10e099000) malloc: *** error: can't allocate region securely
+PassengerHelperAgent(57869,0x10e099000) malloc: *** set a breakpoint in malloc_error_break to debug
+PassengerHelperAgent(58057,0x10e099000) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerHelperAgent(58057,0x10e099000) malloc: *** error: can't allocate region securely
+PassengerHelperAgent(58057,0x10e099000) malloc: *** set a breakpoint in malloc_error_break to debug
+PassengerHelperAgent(58427,0x10e099000) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerHelperAgent(58427,0x10e099000) malloc: *** error: can't allocate region securely
+PassengerHelperAgent(58427,0x10e099000) malloc: *** set a breakpoint in malloc_error_break to debug
+PassengerHelperAgent(59189,0x10e099000) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerHelperAgent(59189,0x10e099000) malloc: *** error: can't allocate region securely
+PassengerHelperAgent(59189,0x10e099000) malloc: *** set a breakpoint in malloc_error_break to debug
+PassengerHelperAgent(59233,0x10e099000) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerHelperAgent(59233,0x10e099000) malloc: *** error: can't allocate region securely
+PassengerHelperAgent(59233,0x10e099000) malloc: *** set a breakpoint in malloc_error_break to debug
+App 50138 stdout: invalid date
+App 50138 stdout: invalid date
+App 50138 stdout: 
+[ 2014-01-02 15:26:46.4197 69248/0x7fff7c7a6310 agents/Watchdog/Main.cpp:510 ]: Options: { 'analytics_log_user' => 'luizcarlos', 'cleanup_pidfiles' => 'L3Zhci9mb2xkZXJzLzkzL2NsemJoc3duNmw1OWNmMmQ2MjcxNjA5YzAwMDBnbi9UL3Bhc3Nlbmdlci1zdGFuZGFsb25lLjE1OWl3bzcvdGVtcF9kaXJfdG91Y2hlci5waWQ=', 'default_group' => 'staff', 'default_python' => 'python', 'default_ruby' => '/Users/luizcarlos/.rbenv/versions/2.0.0-p353/bin/ruby', 'default_user' => 'luizcarlos', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/var/folders/93/clzbhswn6l59cf2d6271609c0000gn/T/passenger-standalone.159iwo7/locations.ini', 'passenger_version' => '4.0.29', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.29', 'web_server_pid' => '69247', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2014-01-02 15:26:46.4363 69250/0x7fff7c7a6310 agents/HelperAgent/Main.cpp:625 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.69247/generation-0/request
+[ 2014-01-02 15:26:46.4455 69252/0x7fff7c7a6310 agents/LoggingAgent/Main.cpp:318 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.69247/generation-0/logging
+[ 2014-01-02 15:26:46.4457 69248/0x7fff7c7a6310 agents/Watchdog/Main.cpp:697 ]: All Phusion Passenger agents started!
+App 69264 stdout: 
+App 69264 stdout: can't find sidekiq gem
+[ 2014-01-02 15:26:50.0512 69250/0x1084be000 Pool2/SmartSpawner.h:301 ]: Preloader for /Users/luizcarlos/Documents/workspace/nyhetis started on PID 69264, listening on unix:/tmp/passenger.1.0.69247/generation-0/backends/preloader.69264
+App 69287 stdout: invalid date
+App 69287 stdout: invalid date
+App 69287 stdout: invalid date
+App 69287 stdout: invalid date
+App 69287 stdout: invalid date
+App 69287 stdout: 
+App 69287 stdout: invalid date
+App 69287 stdout: 
+App 69287 stdout: invalid date
+App 69287 stdout: 
+App 69287 stdout: invalid date
+App 69287 stdout: invalid date
+App 69287 stdout: invalid date
+App 69287 stdout: invalid date
+App 69287 stdout: invalid date
+[ 2014-01-02 20:18:51.5750 8495/0x7fff7c7a6310 agents/Watchdog/Main.cpp:510 ]: Options: { 'analytics_log_user' => 'luizcarlos', 'cleanup_pidfiles' => 'L3Zhci9mb2xkZXJzLzkzL2NsemJoc3duNmw1OWNmMmQ2MjcxNjA5YzAwMDBnbi9UL3Bhc3Nlbmdlci1zdGFuZGFsb25lLjF1N2dieXQvdGVtcF9kaXJfdG91Y2hlci5waWQ=', 'default_group' => 'staff', 'default_python' => 'python', 'default_ruby' => '/Users/luizcarlos/.rbenv/versions/2.0.0-p353/bin/ruby', 'default_user' => 'luizcarlos', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/var/folders/93/clzbhswn6l59cf2d6271609c0000gn/T/passenger-standalone.1u7gbyt/locations.ini', 'passenger_version' => '4.0.29', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.29', 'web_server_pid' => '8494', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2014-01-02 20:18:51.5923 8497/0x7fff7c7a6310 agents/HelperAgent/Main.cpp:625 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.8494/generation-0/request
+[ 2014-01-02 20:18:51.6024 8499/0x7fff7c7a6310 agents/LoggingAgent/Main.cpp:318 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.8494/generation-0/logging
+[ 2014-01-02 20:18:51.6027 8495/0x7fff7c7a6310 agents/Watchdog/Main.cpp:697 ]: All Phusion Passenger agents started!
+/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/passenger-4.0.29/helper-scripts/prespawn:105:in `initialize': Connection refused - connect(2) (Errno::ECONNREFUSED)
+	from /Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/passenger-4.0.29/helper-scripts/prespawn:105:in `new'
+	from /Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/passenger-4.0.29/helper-scripts/prespawn:105:in `connect'
+	from /Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/passenger-4.0.29/helper-scripts/prespawn:86:in `socket'
+	from /Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/passenger-4.0.29/helper-scripts/prespawn:90:in `head_request'
+	from /Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/passenger-4.0.29/helper-scripts/prespawn:145:in `<main>'
+[ 2014-01-02 20:21:02.4839 8825/0x7fff7c7a6310 agents/Watchdog/Main.cpp:510 ]: Options: { 'analytics_log_user' => 'luizcarlos', 'cleanup_pidfiles' => 'L3Zhci9mb2xkZXJzLzkzL2NsemJoc3duNmw1OWNmMmQ2MjcxNjA5YzAwMDBnbi9UL3Bhc3Nlbmdlci1zdGFuZGFsb25lLmhjZHh1dy90ZW1wX2Rpcl90b3VjaGVyLnBpZA==', 'default_group' => 'staff', 'default_python' => 'python', 'default_ruby' => '/Users/luizcarlos/.rbenv/versions/2.0.0-p353/bin/ruby', 'default_user' => 'luizcarlos', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/var/folders/93/clzbhswn6l59cf2d6271609c0000gn/T/passenger-standalone.hcdxuw/locations.ini', 'passenger_version' => '4.0.29', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.29', 'web_server_pid' => '8824', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+PassengerWatchdog(8828,0x7fff7c7a6310) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerWatchdog(8828,0x7fff7c7a6310) malloc: *** error: can't allocate region securely
+PassengerWatchdog(8828,0x7fff7c7a6310) malloc: *** set a breakpoint in malloc_error_break to debug
+[ 2014-01-02 20:21:02.4995 8827/0x7fff7c7a6310 agents/HelperAgent/Main.cpp:625 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.8824/generation-0/request
+PassengerWatchdog(8830,0x7fff7c7a6310) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerWatchdog(8830,0x7fff7c7a6310) malloc: *** error: can't allocate region securely
+PassengerWatchdog(8830,0x7fff7c7a6310) malloc: *** set a breakpoint in malloc_error_break to debug
+[ 2014-01-02 20:21:02.5064 8829/0x7fff7c7a6310 agents/LoggingAgent/Main.cpp:318 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.8824/generation-0/logging
+[ 2014-01-02 20:21:02.5066 8825/0x7fff7c7a6310 agents/Watchdog/Main.cpp:697 ]: All Phusion Passenger agents started!
+App 8841 stdout: 
+App 8841 stdout: can't find sidekiq gem
+[ 2014-01-02 20:21:06.2715 8827/0x108319000 Pool2/Implementation.cpp:869 ]: Could not spawn process for group /Users/luizcarlos/Documents/workspace/nyhetis#default: An error occured while starting up the preloader.
+     in 'void Passenger::ApplicationPool2::SmartSpawner::handleErrorResponse(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:455)
+     in 'string Passenger::ApplicationPool2::SmartSpawner::negotiatePreloaderStartup(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:566)
+     in 'void Passenger::ApplicationPool2::SmartSpawner::startPreloader()' (SmartSpawner.h:206)
+     in 'virtual ProcessPtr Passenger::ApplicationPool2::SmartSpawner::spawn(const Passenger::ApplicationPool2::Options &)' (SmartSpawner.h:752)
+     in 'void Passenger::ApplicationPool2::Group::spawnThreadRealMain(const SpawnerPtr &, const Passenger::ApplicationPool2::Options &, unsigned int)' (Implementation.cpp:802)
+
+[ 2014-01-02 20:21:06.2717 8827/0x108293000 agents/HelperAgent/RequestHandler.h:2060 ]: [Client 29] Cannot checkout session.
+Error page:
+/Users/luizcarlos/Documents/workspace/nyhetis/lib/crawler/crawl_command.rb:45: syntax error, unexpected tSYMBEG, expecting ')'
+      :direct_call_process_job => true,
+       ^
+/Users/luizcarlos/Documents/workspace/nyhetis/lib/crawler/crawl_command.rb:45: Can't assign to true
+/Users/luizcarlos/Documents/workspace/nyhetis/lib/crawler/crawl_command.rb:46: syntax error, unexpected =>, expecting :: or '[' or '.'
+      :internal_urls => ["#{url}/*"]
+                       ^
+/Users/luizcarlos/Documents/workspace/nyhetis/lib/crawler/crawl_command.rb:47: syntax error, unexpected ')', expecting keyword_end
+    ) 
+     ^
+/Users/luizcarlos/Documents/workspace/nyhetis/lib/crawler/crawl_command.rb:62: syntax error, unexpected end-of-input, expecting keyword_end (SyntaxError)
+  /Users/luizcarlos/Documents/workspace/nyhetis/lib/crawler/crawling_controller.rb:1:in `require_relative'
+  /Users/luizcarlos/Documents/workspace/nyhetis/lib/crawler/crawling_controller.rb:1:in `<top (required)>'
+  /Users/luizcarlos/Documents/workspace/nyhetis/lib/api/dossier_endpoint.rb:5:in `require_relative'
+  /Users/luizcarlos/Documents/workspace/nyhetis/lib/api/dossier_endpoint.rb:5:in `<top (required)>'
+  /Users/luizcarlos/Documents/workspace/nyhetis/dossier.rb:11:in `require_relative'
+  /Users/luizcarlos/Documents/workspace/nyhetis/dossier.rb:11:in `<top (required)>'
+  config.ru:1:in `require'
+  config.ru:1:in `block in <main>'
+  /Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/builder.rb:55:in `instance_eval'
+  /Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/builder.rb:55:in `initialize'
+  config.ru:1:in `new'
+  config.ru:1:in `<main>'
+  /Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/passenger-4.0.29/helper-scripts/rack-preloader.rb:108:in `eval'
+  /Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/passenger-4.0.29/helper-scripts/rack-preloader.rb:108:in `preload_app'
+  /Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/passenger-4.0.29/helper-scripts/rack-preloader.rb:153:in `<module:App>'
+  /Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/passenger-4.0.29/helper-scripts/rack-preloader.rb:29:in `<module:PhusionPassenger>'
+  /Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/passenger-4.0.29/helper-scripts/rack-preloader.rb:28:in `<main>'
+
+[ 2014-01-02 20:21:29.7244 8943/0x7fff7c7a6310 agents/Watchdog/Main.cpp:510 ]: Options: { 'analytics_log_user' => 'luizcarlos', 'cleanup_pidfiles' => 'L3Zhci9mb2xkZXJzLzkzL2NsemJoc3duNmw1OWNmMmQ2MjcxNjA5YzAwMDBnbi9UL3Bhc3Nlbmdlci1zdGFuZGFsb25lLng3bzA5OC90ZW1wX2Rpcl90b3VjaGVyLnBpZA==', 'default_group' => 'staff', 'default_python' => 'python', 'default_ruby' => '/Users/luizcarlos/.rbenv/versions/2.0.0-p353/bin/ruby', 'default_user' => 'luizcarlos', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/var/folders/93/clzbhswn6l59cf2d6271609c0000gn/T/passenger-standalone.x7o098/locations.ini', 'passenger_version' => '4.0.29', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.29', 'web_server_pid' => '8942', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2014-01-02 20:21:29.7401 8945/0x7fff7c7a6310 agents/HelperAgent/Main.cpp:625 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.8942/generation-0/request
+PassengerWatchdog(8948,0x7fff7c7a6310) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerWatchdog(8948,0x7fff7c7a6310) malloc: *** error: can't allocate region securely
+PassengerWatchdog(8948,0x7fff7c7a6310) malloc: *** set a breakpoint in malloc_error_break to debug
+[ 2014-01-02 20:21:29.7466 8947/0x7fff7c7a6310 agents/LoggingAgent/Main.cpp:318 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.8942/generation-0/logging
+[ 2014-01-02 20:21:29.7468 8943/0x7fff7c7a6310 agents/Watchdog/Main.cpp:697 ]: All Phusion Passenger agents started!
+App 8959 stdout: 
+App 8959 stdout: can't find sidekiq gem
+[ 2014-01-02 20:21:33.1640 8945/0x101947000 Pool2/SmartSpawner.h:301 ]: Preloader for /Users/luizcarlos/Documents/workspace/nyhetis started on PID 8959, listening on unix:/tmp/passenger.1.0.8942/generation-0/backends/preloader.8959
+[ 2014-01-02 20:58:58.5047 11120/0x7fff7c7a6310 agents/Watchdog/Main.cpp:510 ]: Options: { 'analytics_log_user' => 'luizcarlos', 'cleanup_pidfiles' => 'L3Zhci9mb2xkZXJzLzkzL2NsemJoc3duNmw1OWNmMmQ2MjcxNjA5YzAwMDBnbi9UL3Bhc3Nlbmdlci1zdGFuZGFsb25lLjFpcm12cTkvdGVtcF9kaXJfdG91Y2hlci5waWQ=', 'default_group' => 'staff', 'default_python' => 'python', 'default_ruby' => '/Users/luizcarlos/.rbenv/versions/2.0.0-p353/bin/ruby', 'default_user' => 'luizcarlos', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/var/folders/93/clzbhswn6l59cf2d6271609c0000gn/T/passenger-standalone.1irmvq9/locations.ini', 'passenger_version' => '4.0.29', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.29', 'web_server_pid' => '11119', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+PassengerWatchdog(11123,0x7fff7c7a6310) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerWatchdog(11123,0x7fff7c7a6310) malloc: *** error: can't allocate region securely
+PassengerWatchdog(11123,0x7fff7c7a6310) malloc: *** set a breakpoint in malloc_error_break to debug
+[ 2014-01-02 20:58:58.5211 11122/0x7fff7c7a6310 agents/HelperAgent/Main.cpp:625 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.11119/generation-0/request
+PassengerWatchdog(11125,0x7fff7c7a6310) malloc: *** mach_vm_map(size=1048576) failed (error code=268435459)
+PassengerWatchdog(11125,0x7fff7c7a6310) malloc: *** error: can't allocate region securely
+PassengerWatchdog(11125,0x7fff7c7a6310) malloc: *** set a breakpoint in malloc_error_break to debug
+[ 2014-01-02 20:58:58.5277 11124/0x7fff7c7a6310 agents/LoggingAgent/Main.cpp:318 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.11119/generation-0/logging
+[ 2014-01-02 20:58:58.5279 11120/0x7fff7c7a6310 agents/Watchdog/Main.cpp:697 ]: All Phusion Passenger agents started!
+App 11136 stdout: 
+App 11136 stdout: can't find sidekiq gem
+[ 2014-01-02 20:59:02.2234 11122/0x10be84000 Pool2/SmartSpawner.h:301 ]: Preloader for /Users/luizcarlos/Documents/workspace/nyhetis started on PID 11136, listening on unix:/tmp/passenger.1.0.11119/generation-0/backends/preloader.11136
+[ 2014-01-02 21:53:15.8457 14231/0x7fff7c7a6310 agents/Watchdog/Main.cpp:510 ]: Options: { 'analytics_log_user' => 'luizcarlos', 'cleanup_pidfiles' => 'L3Zhci9mb2xkZXJzLzkzL2NsemJoc3duNmw1OWNmMmQ2MjcxNjA5YzAwMDBnbi9UL3Bhc3Nlbmdlci1zdGFuZGFsb25lLmhrc2h6dy90ZW1wX2Rpcl90b3VjaGVyLnBpZA==', 'default_group' => 'staff', 'default_python' => 'python', 'default_ruby' => '/Users/luizcarlos/.rbenv/versions/2.0.0-p353/bin/ruby', 'default_user' => 'luizcarlos', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/var/folders/93/clzbhswn6l59cf2d6271609c0000gn/T/passenger-standalone.hkshzw/locations.ini', 'passenger_version' => '4.0.29', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.29', 'web_server_pid' => '14230', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2014-01-02 21:53:15.8618 14233/0x7fff7c7a6310 agents/HelperAgent/Main.cpp:625 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.14230/generation-0/request
+[ 2014-01-02 21:53:15.8956 14235/0x7fff7c7a6310 agents/LoggingAgent/Main.cpp:318 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.14230/generation-0/logging
+[ 2014-01-02 21:53:15.8958 14231/0x7fff7c7a6310 agents/Watchdog/Main.cpp:697 ]: All Phusion Passenger agents started!
+App 14247 stdout: 
+App 14247 stdout: can't find sidekiq gem
+[ 2014-01-02 21:53:19.4138 14233/0x1039c8000 Pool2/SmartSpawner.h:301 ]: Preloader for /Users/luizcarlos/Documents/workspace/nyhetis started on PID 14247, listening on unix:/tmp/passenger.1.0.14230/generation-0/backends/preloader.14247
+[ 2014-01-02 21:55:04.8158 14474/0x7fff7c7a6310 agents/Watchdog/Main.cpp:510 ]: Options: { 'analytics_log_user' => 'luizcarlos', 'cleanup_pidfiles' => 'L3Zhci9mb2xkZXJzLzkzL2NsemJoc3duNmw1OWNmMmQ2MjcxNjA5YzAwMDBnbi9UL3Bhc3Nlbmdlci1zdGFuZGFsb25lLjU5bG04Mi90ZW1wX2Rpcl90b3VjaGVyLnBpZA==', 'default_group' => 'staff', 'default_python' => 'python', 'default_ruby' => '/Users/luizcarlos/.rbenv/versions/2.0.0-p353/bin/ruby', 'default_user' => 'luizcarlos', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/var/folders/93/clzbhswn6l59cf2d6271609c0000gn/T/passenger-standalone.59lm82/locations.ini', 'passenger_version' => '4.0.29', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.29', 'web_server_pid' => '14473', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2014-01-02 21:55:04.8317 14476/0x7fff7c7a6310 agents/HelperAgent/Main.cpp:625 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.14473/generation-0/request
+[ 2014-01-02 21:55:04.8382 14478/0x7fff7c7a6310 agents/LoggingAgent/Main.cpp:318 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.14473/generation-0/logging
+[ 2014-01-02 21:55:04.8384 14474/0x7fff7c7a6310 agents/Watchdog/Main.cpp:697 ]: All Phusion Passenger agents started!
+App 14490 stdout: 
+App 14490 stdout: can't find sidekiq gem
+[ 2014-01-02 21:55:08.6322 14476/0x108b41000 Pool2/SmartSpawner.h:301 ]: Preloader for /Users/luizcarlos/Documents/workspace/nyhetis started on PID 14490, listening on unix:/tmp/passenger.1.0.14473/generation-0/backends/preloader.14490
+[ 2014-01-02 21:56:57.9093 14725/0x7fff7c7a6310 agents/Watchdog/Main.cpp:510 ]: Options: { 'analytics_log_user' => 'luizcarlos', 'cleanup_pidfiles' => 'L3Zhci9mb2xkZXJzLzkzL2NsemJoc3duNmw1OWNmMmQ2MjcxNjA5YzAwMDBnbi9UL3Bhc3Nlbmdlci1zdGFuZGFsb25lLjFwbnh2MS90ZW1wX2Rpcl90b3VjaGVyLnBpZA==', 'default_group' => 'staff', 'default_python' => 'python', 'default_ruby' => '/Users/luizcarlos/.rbenv/versions/2.0.0-p353/bin/ruby', 'default_user' => 'luizcarlos', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/var/folders/93/clzbhswn6l59cf2d6271609c0000gn/T/passenger-standalone.1pnxv1/locations.ini', 'passenger_version' => '4.0.29', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.29', 'web_server_pid' => '14724', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2014-01-02 21:56:57.9256 14727/0x7fff7c7a6310 agents/HelperAgent/Main.cpp:625 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.14724/generation-0/request
+[ 2014-01-02 21:56:57.9325 14729/0x7fff7c7a6310 agents/LoggingAgent/Main.cpp:318 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.14724/generation-0/logging
+[ 2014-01-02 21:56:57.9327 14725/0x7fff7c7a6310 agents/Watchdog/Main.cpp:697 ]: All Phusion Passenger agents started!
+App 14740 stdout: 
+App 14740 stdout: can't find sidekiq gem
+[ 2014-01-02 21:57:01.2572 14727/0x101df2000 Pool2/SmartSpawner.h:301 ]: Preloader for /Users/luizcarlos/Documents/workspace/nyhetis started on PID 14740, listening on unix:/tmp/passenger.1.0.14724/generation-0/backends/preloader.14740
+App 14740 stderr: NoMethodError - undefined method `instance' for #<Hash:0x007fc1cb4de100>:
+App 14740 stderr: 	/Users/luizcarlos/Documents/workspace/nyhetis/lib/crawler/crawl_command.rb:28:in `block in start!'
+App 14740 stderr: 	/Users/luizcarlos/Documents/workspace/nyhetis/lib/crawler/crawl_command.rb:27:in `each'
+App 14740 stderr: 	/Users/luizcarlos/Documents/workspace/nyhetis/lib/crawler/crawl_command.rb:27:in `start!'
+App 14740 stderr: 	/Users/luizcarlos/Documents/workspace/nyhetis/lib/crawler/crawling_controller.rb:6:in `crawl_newspapers'
+App 14740 stderr: 	/Users/luizcarlos/Documents/workspace/nyhetis/lib/api/dossier_endpoint.rb:34:in `block in <class:DossierEndpoint>'
+App 14740 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:1293:in `call'
+App 14740 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:1293:in `block in compile!'
+App 14740 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:860:in `[]'
+App 14740 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:860:in `block (3 levels) in route!'
+App 14740 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:876:in `route_eval'
+App 14740 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:860:in `block (2 levels) in route!'
+App 14740 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:897:in `block in process_route'
+App 14740 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:895:in `catch'
+App 14740 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:895:in `process_route'
+App 14740 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:859:in `block in route!'
+App 14740 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:858:in `each'
+App 14740 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:858:in `route!'
+App 14740 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:963:in `block in dispatch!'
+App 14740 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:946:in `block in invoke'
+App 14740 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:946:in `catch'
+App 14740 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:946:in `invoke'
+App 14740 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:960:in `dispatch!'
+App 14740 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:794:in `block in call!'
+App 14740 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:946:in `block in invoke'
+App 14740 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:946:in `catch'
+App 14740 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:946:in `invoke'
+App 14740 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:794:in `call!'
+App 14740 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:780:in `call'
+App 14740 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-protection-1.5.1/lib/rack/protection/xss_header.rb:18:in `call'
+App 14740 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-protection-1.5.1/lib/rack/protection/path_traversal.rb:16:in `call'
+App 14740 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-protection-1.5.1/lib/rack/protection/json_csrf.rb:18:in `call'
+App 14740 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-protection-1.5.1/lib/rack/protection/base.rb:50:in `call'
+App 14740 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-protection-1.5.1/lib/rack/protection/base.rb:50:in `call'
+App 14740 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-protection-1.5.1/lib/rack/protection/frame_options.rb:31:in `call'
+App 14740 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/nulllogger.rb:9:in `call'
+App 14740 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+App 14740 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:124:in `call'
+App 14740 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:1417:in `block in call'
+App 14740 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:1499:in `synchronize'
+App 14740 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:1417:in `call'
+App 14740 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/r
+App 14740 stderr: ack/builder.rb:138:in `call'
+App 14740 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/urlmap.rb:65:in `block in call'
+App 14740 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/urlmap.rb:50:in `each'
+App 14740 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/urlmap.rb:50:in `call'
+App 14740 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-cors-0.2.9/lib/rack/cors.rb:54:in `call'
+App 14740 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/passenger-4.0.29/lib/phusion_passenger/rack/thread_handler_extension.rb:77:in `process_request'
+App 14740 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/passenger-4.0.29/lib/phusion_passenger/request_handler/thread_handler.rb:140:in `accept_and_process_next_request'
+App 14740 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/passenger-4.0.29/lib/phusion_passenger/request_handler/thread_handler.rb:108:in `main_loop'
+App 14740 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/passenger-4.0.29/lib/phusion_passenger/request_handler.rb:441:in `block (3 levels) in start_threads'
+[ 2014-01-02 21:58:13.2835 15091/0x7fff7c7a6310 agents/Watchdog/Main.cpp:510 ]: Options: { 'analytics_log_user' => 'luizcarlos', 'cleanup_pidfiles' => 'L3Zhci9mb2xkZXJzLzkzL2NsemJoc3duNmw1OWNmMmQ2MjcxNjA5YzAwMDBnbi9UL3Bhc3Nlbmdlci1zdGFuZGFsb25lLjF5aGU2NWovdGVtcF9kaXJfdG91Y2hlci5waWQ=', 'default_group' => 'staff', 'default_python' => 'python', 'default_ruby' => '/Users/luizcarlos/.rbenv/versions/2.0.0-p353/bin/ruby', 'default_user' => 'luizcarlos', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/var/folders/93/clzbhswn6l59cf2d6271609c0000gn/T/passenger-standalone.1yhe65j/locations.ini', 'passenger_version' => '4.0.29', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.29', 'web_server_pid' => '15090', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+PassengerWatchdog(15094,0x7fff7c7a6310) malloc: *** mach_vm_map(size=1048576) failed (error code=268435459)
+PassengerWatchdog(15094,0x7fff7c7a6310) malloc: *** error: can't allocate region securely
+PassengerWatchdog(15094,0x7fff7c7a6310) malloc: *** set a breakpoint in malloc_error_break to debug
+[ 2014-01-02 21:58:13.3003 15093/0x7fff7c7a6310 agents/HelperAgent/Main.cpp:625 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.15090/generation-0/request
+[ 2014-01-02 21:58:13.3085 15095/0x7fff7c7a6310 agents/LoggingAgent/Main.cpp:318 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.15090/generation-0/logging
+[ 2014-01-02 21:58:13.3088 15091/0x7fff7c7a6310 agents/Watchdog/Main.cpp:697 ]: All Phusion Passenger agents started!
+App 15109 stdout: 
+App 15109 stdout: can't find sidekiq gem
+[ 2014-01-02 21:58:17.0533 15093/0x10d08b000 Pool2/SmartSpawner.h:301 ]: Preloader for /Users/luizcarlos/Documents/workspace/nyhetis started on PID 15109, listening on unix:/tmp/passenger.1.0.15090/generation-0/backends/preloader.15109
+[ 2014-01-02 22:02:05.3944 16081/0x7fff7c7a6310 agents/Watchdog/Main.cpp:510 ]: Options: { 'analytics_log_user' => 'luizcarlos', 'cleanup_pidfiles' => 'L3Zhci9mb2xkZXJzLzkzL2NsemJoc3duNmw1OWNmMmQ2MjcxNjA5YzAwMDBnbi9UL3Bhc3Nlbmdlci1zdGFuZGFsb25lLjEyNnA4MncvdGVtcF9kaXJfdG91Y2hlci5waWQ=', 'default_group' => 'staff', 'default_python' => 'python', 'default_ruby' => '/Users/luizcarlos/.rbenv/versions/2.0.0-p353/bin/ruby', 'default_user' => 'luizcarlos', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/var/folders/93/clzbhswn6l59cf2d6271609c0000gn/T/passenger-standalone.126p82w/locations.ini', 'passenger_version' => '4.0.29', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.29', 'web_server_pid' => '16080', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2014-01-02 22:02:05.4130 16083/0x7fff7c7a6310 agents/HelperAgent/Main.cpp:625 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.16080/generation-0/request
+[ 2014-01-02 22:02:05.4194 16085/0x7fff7c7a6310 agents/LoggingAgent/Main.cpp:318 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.16080/generation-0/logging
+[ 2014-01-02 22:02:05.4196 16081/0x7fff7c7a6310 agents/Watchdog/Main.cpp:697 ]: All Phusion Passenger agents started!
+App 16144 stdout: 
+App 16144 stdout: can't find sidekiq gem
+[ 2014-01-02 22:02:09.4306 16083/0x103673000 Pool2/SmartSpawner.h:301 ]: Preloader for /Users/luizcarlos/Documents/workspace/nyhetis started on PID 16144, listening on unix:/tmp/passenger.1.0.16080/generation-0/backends/preloader.16144
+PassengerWatchdog (cleaning up...)(16184,0x7fff7c7a6310) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerWatchdog (cleaning up...)(16184,0x7fff7c7a6310) malloc: *** error: can't allocate region securely
+PassengerWatchdog (cleaning up...)(16184,0x7fff7c7a6310) malloc: *** set a breakpoint in malloc_error_break to debug
+PassengerHelperAgent(16240,0x1033fd000) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerHelperAgent(16240,0x1033fd000) malloc: *** error: can't allocate region securely
+PassengerHelperAgent(16240,0x1033fd000) malloc: *** set a breakpoint in malloc_error_break to debug
+PassengerHelperAgent(16284,0x1033fd000) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerHelperAgent(16284,0x1033fd000) malloc: *** error: can't allocate region securely
+PassengerHelperAgent(16284,0x1033fd000) malloc: *** set a breakpoint in malloc_error_break to debug
+[ 2014-01-02 22:04:29.4251 16530/0x7fff7c7a6310 agents/Watchdog/Main.cpp:510 ]: Options: { 'analytics_log_user' => 'luizcarlos', 'cleanup_pidfiles' => 'L3Zhci9mb2xkZXJzLzkzL2NsemJoc3duNmw1OWNmMmQ2MjcxNjA5YzAwMDBnbi9UL3Bhc3Nlbmdlci1zdGFuZGFsb25lLjFicHI0aHYvdGVtcF9kaXJfdG91Y2hlci5waWQ=', 'default_group' => 'staff', 'default_python' => 'python', 'default_ruby' => '/Users/luizcarlos/.rbenv/versions/2.0.0-p353/bin/ruby', 'default_user' => 'luizcarlos', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/var/folders/93/clzbhswn6l59cf2d6271609c0000gn/T/passenger-standalone.1bpr4hv/locations.ini', 'passenger_version' => '4.0.29', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.29', 'web_server_pid' => '16529', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2014-01-02 22:04:29.4482 16532/0x7fff7c7a6310 agents/HelperAgent/Main.cpp:625 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.16529/generation-0/request
+[ 2014-01-02 22:04:29.4562 16534/0x7fff7c7a6310 agents/LoggingAgent/Main.cpp:318 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.16529/generation-0/logging
+[ 2014-01-02 22:04:29.4565 16530/0x7fff7c7a6310 agents/Watchdog/Main.cpp:697 ]: All Phusion Passenger agents started!
+App 16569 stderr: PassengerHelperAgent(16570,0x10c4b1000) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+App 16569 stderr: PassengerHelperAgent(16570,0x10c
+App 16569 stderr: 4b1000) malloc: *** error: can't allocate region securely
+App 16569 stderr: PassengerHelperAgent(16570,0x10c4b1000) malloc: *** set a breakpoint in malloc_error_break to debug
+App 16569 stdout: 
+App 16569 stdout: can't find sidekiq gem
+[ 2014-01-02 22:04:33.0847 16532/0x10c4b1000 Pool2/SmartSpawner.h:301 ]: Preloader for /Users/luizcarlos/Documents/workspace/nyhetis started on PID 16569, listening on unix:/tmp/passenger.1.0.16529/generation-0/backends/preloader.16569
+PassengerHelperAgent(16631,0x10c23b000) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerHelperAgent(16631,0x10c23b000) malloc: *** error: can't allocate region securely
+PassengerHelperAgent(16631,0x10c23b000) malloc: *** set a breakpoint in malloc_error_break to debug
+PassengerHelperAgent(16647,0x10c23b000) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerHelperAgent(16647,0x10c23b000) malloc: *** error: can't allocate region securely
+PassengerHelperAgent(16647,0x10c23b000) malloc: *** set a breakpoint in malloc_error_break to debug
+PassengerWatchdog (cleaning up...)(17527,0x7fff7c7a6310) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerWatchdog (cleaning up...)(17527,0x7fff7c7a6310) malloc: *** error: can't allocate region securely
+PassengerWatchdog (cleaning up...)(17527,0x7fff7c7a6310) malloc: *** set a breakpoint in malloc_error_break to debug
+[ 2014-01-02 22:12:39.6350 17581/0x7fff7c7a6310 agents/Watchdog/Main.cpp:510 ]: Options: { 'analytics_log_user' => 'luizcarlos', 'cleanup_pidfiles' => 'L3Zhci9mb2xkZXJzLzkzL2NsemJoc3duNmw1OWNmMmQ2MjcxNjA5YzAwMDBnbi9UL3Bhc3Nlbmdlci1zdGFuZGFsb25lLjF0MjRodzkvdGVtcF9kaXJfdG91Y2hlci5waWQ=', 'default_group' => 'staff', 'default_python' => 'python', 'default_ruby' => '/Users/luizcarlos/.rbenv/versions/2.0.0-p353/bin/ruby', 'default_user' => 'luizcarlos', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/var/folders/93/clzbhswn6l59cf2d6271609c0000gn/T/passenger-standalone.1t24hw9/locations.ini', 'passenger_version' => '4.0.29', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.29', 'web_server_pid' => '17580', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2014-01-02 22:12:39.6514 17583/0x7fff7c7a6310 agents/HelperAgent/Main.cpp:625 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.17580/generation-0/request
+[ 2014-01-02 22:12:39.6647 17585/0x7fff7c7a6310 agents/LoggingAgent/Main.cpp:318 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.17580/generation-0/logging
+[ 2014-01-02 22:12:39.6649 17581/0x7fff7c7a6310 agents/Watchdog/Main.cpp:697 ]: All Phusion Passenger agents started!
+App 17598 stdout: 
+App 17598 stdout: can't find sidekiq gem
+[ 2014-01-02 22:12:43.3167 17583/0x1079d8000 Pool2/SmartSpawner.h:301 ]: Preloader for /Users/luizcarlos/Documents/workspace/nyhetis started on PID 17598, listening on unix:/tmp/passenger.1.0.17580/generation-0/backends/preloader.17598
+[ 2014-01-02 22:30:14.8984 18405/0x7fff7c7a6310 agents/Watchdog/Main.cpp:510 ]: Options: { 'analytics_log_user' => 'luizcarlos', 'cleanup_pidfiles' => 'L3Zhci9mb2xkZXJzLzkzL2NsemJoc3duNmw1OWNmMmQ2MjcxNjA5YzAwMDBnbi9UL3Bhc3Nlbmdlci1zdGFuZGFsb25lLjFxYjZ1di90ZW1wX2Rpcl90b3VjaGVyLnBpZA==', 'default_group' => 'staff', 'default_python' => 'python', 'default_ruby' => '/Users/luizcarlos/.rbenv/versions/2.0.0-p353/bin/ruby', 'default_user' => 'luizcarlos', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/var/folders/93/clzbhswn6l59cf2d6271609c0000gn/T/passenger-standalone.1qb6uv/locations.ini', 'passenger_version' => '4.0.29', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.29', 'web_server_pid' => '18404', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2014-01-02 22:30:14.9153 18407/0x7fff7c7a6310 agents/HelperAgent/Main.cpp:625 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.18404/generation-0/request
+[ 2014-01-02 22:30:14.9219 18409/0x7fff7c7a6310 agents/LoggingAgent/Main.cpp:318 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.18404/generation-0/logging
+[ 2014-01-02 22:30:14.9222 18405/0x7fff7c7a6310 agents/Watchdog/Main.cpp:697 ]: All Phusion Passenger agents started!
+App 18421 stdout: 
+App 18421 stdout: can't find sidekiq gem
+[ 2014-01-02 22:30:18.5260 18407/0x102645000 Pool2/SmartSpawner.h:301 ]: Preloader for /Users/luizcarlos/Documents/workspace/nyhetis started on PID 18421, listening on unix:/tmp/passenger.1.0.18404/generation-0/backends/preloader.18421
+App 18421 stderr: RuntimeError - downstream app not set:
+App 18421 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:840:in `forward'
+App 18421 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:910:in `route_missing'
+App 18421 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:871:in `route!'
+App 18421 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:867:in `route!'
+App 18421 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:963:in `block in dispatch!'
+App 18421 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:946:in `block in invoke'
+App 18421 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:946:in `catch'
+App 18421 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:946:in `invoke'
+App 18421 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:960:in `dispatch!'
+App 18421 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:794:in `block in call!'
+App 18421 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:946:in `block in invoke'
+App 18421 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:946:in `catch'
+App 18421 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:946:in `invoke'
+App 18421 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:794:in `call!'
+App 18421 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:780:in `call'
+App 18421 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-protection-1.5.1/lib/rack/protection/xss_header.rb:18:in `call'
+App 18421 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-protection-1.5.1/lib/rack/protection/path_traversal.rb:16:in `call'
+App 18421 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-protection-1.5.1/lib/rack/protection/json_csrf.rb:18:in `call'
+App 18421 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-protection-1.5.1/lib/rack/protection/base.rb:50:in `call'
+App 18421 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-protection-1.5.1/lib/rack/protection/base.rb:50:in `call'
+App 18421 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-protection-1.5.1/lib/rack/protection/frame_options.rb:31:in `call'
+App 18421 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/nulllogger.rb:9:in `call'
+App 18421 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+App 18421 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:124:in `call'
+App 18421 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:1417:in `block in call'
+App 18421 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:1499:in `synchronize'
+App 18421 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:1417:in `call'
+App 18421 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/builder.rb:138:in `call'
+App 18421 stderr: 	/Users/luiz
+App 18421 stderr: carlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/urlmap.rb:65:in `block in call'
+App 18421 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/urlmap.rb:50:in `each'
+App 18421 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/urlmap.rb:50:in `call'
+App 18421 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-cors-0.2.9/lib/rack/cors.rb:54:in `call'
+App 18421 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/passenger-4.0.29/lib/phusion_passenger/rack/thread_handler_extension.rb:77:in `process_request'
+App 18421 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/passenger-4.0.29/lib/phusion_passenger/request_handler/thread_handler.rb:140:in `accept_and_process_next_request'
+App 18421 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/passenger-4.0.29/lib/phusion_passenger/request_handler/thread_handler.rb:108:in `main_loop'
+App 18421 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/passenger-4.0.29/lib/phusion_passenger/request_handler.rb:441:in `block (3 levels) in start_threads'
+[ 2014-01-02 22:32:36.3824 18716/0x7fff7c7a6310 agents/Watchdog/Main.cpp:510 ]: Options: { 'analytics_log_user' => 'luizcarlos', 'cleanup_pidfiles' => 'L3Zhci9mb2xkZXJzLzkzL2NsemJoc3duNmw1OWNmMmQ2MjcxNjA5YzAwMDBnbi9UL3Bhc3Nlbmdlci1zdGFuZGFsb25lLnM4N2h5Yi90ZW1wX2Rpcl90b3VjaGVyLnBpZA==', 'default_group' => 'staff', 'default_python' => 'python', 'default_ruby' => '/Users/luizcarlos/.rbenv/versions/2.0.0-p353/bin/ruby', 'default_user' => 'luizcarlos', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/var/folders/93/clzbhswn6l59cf2d6271609c0000gn/T/passenger-standalone.s87hyb/locations.ini', 'passenger_version' => '4.0.29', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.29', 'web_server_pid' => '18715', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2014-01-02 22:32:36.3986 18718/0x7fff7c7a6310 agents/HelperAgent/Main.cpp:625 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.18715/generation-0/request
+[ 2014-01-02 22:32:36.4055 18720/0x7fff7c7a6310 agents/LoggingAgent/Main.cpp:318 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.18715/generation-0/logging
+[ 2014-01-02 22:32:36.4057 18716/0x7fff7c7a6310 agents/Watchdog/Main.cpp:697 ]: All Phusion Passenger agents started!
+App 18741 stdout: 
+App 18741 stdout: can't find sidekiq gem
+[ 2014-01-02 22:32:39.8821 18718/0x10716b000 Pool2/SmartSpawner.h:301 ]: Preloader for /Users/luizcarlos/Documents/workspace/nyhetis started on PID 18741, listening on unix:/tmp/passenger.1.0.18715/generation-0/backends/preloader.18741
+PassengerHelperAgent(18919,0x106ef5000) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerHelperAgent(18919,0x106ef5000) malloc: *** error: can't allocate region securely
+PassengerHelperAgent(18919,0x106ef5000) malloc: *** set a breakpoint in malloc_error_break to debug
+PassengerHelperAgent(18922,0x106ef5000) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerHelperAgent(18922,0x106ef5000) malloc: *** error: can't allocate region securely
+PassengerHelperAgent(18922,0x106ef5000) malloc: *** set a breakpoint in malloc_error_break to debug
+[ 2014-01-02 22:43:57.7211 19403/0x7fff7c7a6310 agents/Watchdog/Main.cpp:510 ]: Options: { 'analytics_log_user' => 'luizcarlos', 'cleanup_pidfiles' => 'L3Zhci9mb2xkZXJzLzkzL2NsemJoc3duNmw1OWNmMmQ2MjcxNjA5YzAwMDBnbi9UL3Bhc3Nlbmdlci1zdGFuZGFsb25lLjF5ZDVxcDYvdGVtcF9kaXJfdG91Y2hlci5waWQ=', 'default_group' => 'staff', 'default_python' => 'python', 'default_ruby' => '/Users/luizcarlos/.rbenv/versions/2.0.0-p353/bin/ruby', 'default_user' => 'luizcarlos', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/var/folders/93/clzbhswn6l59cf2d6271609c0000gn/T/passenger-standalone.1yd5qp6/locations.ini', 'passenger_version' => '4.0.29', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.29', 'web_server_pid' => '19402', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2014-01-02 22:43:57.7421 19405/0x7fff7c7a6310 agents/HelperAgent/Main.cpp:625 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.19402/generation-0/request
+[ 2014-01-02 22:43:57.7487 19407/0x7fff7c7a6310 agents/LoggingAgent/Main.cpp:318 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.19402/generation-0/logging
+[ 2014-01-02 22:43:57.7489 19403/0x7fff7c7a6310 agents/Watchdog/Main.cpp:697 ]: All Phusion Passenger agents started!
+App 19419 stdout: 
+App 19419 stdout: can't find sidekiq gem
+[ 2014-01-02 22:44:01.8136 19405/0x10c8f9000 Pool2/SmartSpawner.h:301 ]: Preloader for /Users/luizcarlos/Documents/workspace/nyhetis started on PID 19419, listening on unix:/tmp/passenger.1.0.19402/generation-0/backends/preloader.19419
+App 19419 stderr: TypeError - no implicit conversion of String into Integer:
+App 19419 stderr: 	/Users/luizcarlos/Documents/workspace/nyhetis/lib/crawler/crawl_command.rb:60:in `[]'
+App 19419 stderr: 	/Users/luizcarlos/Documents/workspace/nyhetis/lib/crawler/crawl_command.rb:60:in `block in crawlers'
+App 19419 stderr: 	/Users/luizcarlos/Documents/workspace/nyhetis/lib/crawler/crawl_command.rb:59:in `each'
+App 19419 stderr: 	/Users/luizcarlos/Documents/workspace/nyhetis/lib/crawler/crawl_command.rb:59:in `map'
+App 19419 stderr: 	/Users/luizcarlos/Documents/workspace/nyhetis/lib/crawler/crawl_command.rb:59:in `craw
+App 19419 stderr: lers'
+App 19419 stderr: 	/Users/luizcarlos/Documents/workspace/nyhetis/lib/crawler/crawl_command.rb:27:in `start!'
+App 19419 stderr: 	/Users/luizcarlos/Documents/workspace/nyhetis/lib/crawler/crawling_controller.rb:6:in `crawl_newspapers'
+App 19419 stderr: 	/Users/luizcarlos/Documents/workspace/nyhetis/lib/api/dossier_endpoint.rb:34:in `block in <class:DossierEndpoint>'
+App 19419 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:1293:in `call'
+App 19419 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:1293:in `block in compile!'
+App 19419 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:860:in `[]'
+App 19419 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:860:in `block (3 levels) in route!'
+App 19419 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:876:in `route_eval'
+App 19419 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:860:in `block (2 levels) in route!'
+App 19419 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:897:in `block in process_route'
+App 19419 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:895:in `catch'
+App 19419 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:895:in `process_route'
+App 19419 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:859:in `block in route!'
+App 19419 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:858:in `each'
+App 19419 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:858:in `route!'
+App 19419 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:963:in `block in dispatch!'
+App 19419 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:946:in `block in invoke'
+App 19419 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:946:in `catch'
+App 19419 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:946:in `invoke'
+App 19419 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:960:in `dispatch!'
+App 19419 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:794:in `block in call!'
+App 19419 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:946:in `block in invoke'
+App 19419 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:946:in `catch'
+App 19419 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:946:in `invoke'
+App 19419 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:794:in `call!'
+App 19419 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:780:in `call'
+App 19419 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-protection-1.5.1/lib/rack/protection/xss_header.rb:18:in `call'
+App 19419 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-protection-1.5.1/lib/rack/protection/path_traversal.rb:16:in `call'
+App 19419 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-protection-1.5.1/lib/rack/protection/json_csrf.rb:18:in `call'
+App 19419 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-protection-1.5.1/lib/rack/protection/base.rb:50:in `call'
+App 19419 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-protection-1.5.1/lib/rack/protection/base.rb:50:in `call'
+App 19419 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-protection-1.5.1/lib/rack/protection/frame_options.rb:31:in `call'
+App 19419 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/nulllogger.rb:9:in `call'
+App 19419 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+App 19419 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:124:in `call'
+App 19419 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:1417:in `block in call'
+App 19419 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:1499:in `synchronize'
+App 19419 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sinatra-1.3.6/lib/sinatra/base.rb:1417:in `call'
+App 19419 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/builder.rb:138:in `call'
+App 19419 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/urlmap.rb:65:in `block in call'
+App 19419 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/urlmap.rb:50:in `each'
+App 19419 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/urlmap.rb:50:in `call'
+App 19419 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-cors-0.2.9/lib/rack/cors.rb:54:in `call'
+App 19419 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/passenger-4.0.29/lib/phusion_passenger/rack/thread_handler_extension.rb:77:in `process_request'
+App 19419 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/passenger-4.0.29/lib/phusion_passenger/request_handler/thread_handler.rb:140:in `accept_and_process_next_request'
+App 19419 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/passenger-4.0.29/lib/phusion_passenger/request_handler/thread_handler.rb:108:in `main_loop'
+App 19419 stderr: 	/Users/luizcarlos/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/passenger-4.0.29/lib/phusion_passenger/request_handler.rb:441:in `block (3 levels) in start_threads'
+PassengerHelperAgent(19461,0x10c683000) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerHelperAgent(19461,0x10c683000) malloc: *** error: can't allocate region securely
+PassengerHelperAgent(19461,0x10c683000) malloc: *** set a breakpoint in malloc_error_break to debug
+[ 2014-01-02 22:44:27.1601 19527/0x7fff7c7a6310 agents/Watchdog/Main.cpp:510 ]: Options: { 'analytics_log_user' => 'luizcarlos', 'cleanup_pidfiles' => 'L3Zhci9mb2xkZXJzLzkzL2NsemJoc3duNmw1OWNmMmQ2MjcxNjA5YzAwMDBnbi9UL3Bhc3Nlbmdlci1zdGFuZGFsb25lLjE3NnV1YTEvdGVtcF9kaXJfdG91Y2hlci5waWQ=', 'default_group' => 'staff', 'default_python' => 'python', 'default_ruby' => '/Users/luizcarlos/.rbenv/versions/2.0.0-p353/bin/ruby', 'default_user' => 'luizcarlos', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/var/folders/93/clzbhswn6l59cf2d6271609c0000gn/T/passenger-standalone.176uua1/locations.ini', 'passenger_version' => '4.0.29', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.29', 'web_server_pid' => '19526', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2014-01-02 22:44:27.1765 19529/0x7fff7c7a6310 agents/HelperAgent/Main.cpp:625 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.19526/generation-0/request
+[ 2014-01-02 22:44:27.1827 19531/0x7fff7c7a6310 agents/LoggingAgent/Main.cpp:318 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.19526/generation-0/logging
+[ 2014-01-02 22:44:27.1829 19527/0x7fff7c7a6310 agents/Watchdog/Main.cpp:697 ]: All Phusion Passenger agents started!
+App 19552 stdout: 
+App 19552 stdout: can't find sidekiq gem
+[ 2014-01-02 22:44:30.6557 19529/0x10cc1d000 Pool2/SmartSpawner.h:301 ]: Preloader for /Users/luizcarlos/Documents/workspace/nyhetis started on PID 19552, listening on unix:/tmp/passenger.1.0.19526/generation-0/backends/preloader.19552
+[ 2014-01-04 15:00:09.9769 19531/0x7fff7c7a6310 agents/LoggingAgent/Main.cpp:286 ]: Caught signal, exiting...

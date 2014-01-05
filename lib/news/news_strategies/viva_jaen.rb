@@ -25,8 +25,8 @@ module New
 				rescue 
 					@date = ""
 				end
-				@text = Normalizer.news_process(content.gsub("\n","").strip)
-				@heading = Normalizer.news_process(heading)
+				@text = content.gsub("\n","").strip
+				@heading = heading
 			end
 		end
 

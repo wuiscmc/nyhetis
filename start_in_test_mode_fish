@@ -1,0 +1,1 @@
+begin;set -lx RACK_ENV test;shotgun config.ru;end

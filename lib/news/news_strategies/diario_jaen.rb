@@ -1,5 +1,4 @@
 require 'nokogiri'
-
 module New
 
 	class DiarioJaen < AbstractNew
@@ -31,10 +30,23 @@ module New
         rescue 
           @date = ""
         end
-  			@heading = Normalizer.news_process(heading.gsub("\n","").strip)
-  			@text = Normalizer.news_process(content)
+        image_path = get_image_path(page)
+        @image = image_path.empty? ? "" : "http://www.diariojaen.es" + image_path
+        @heading = heading#.gsub("\n","").strip
+        @text = content
       end
+
 		end
+
+    private 
+    
+    def get_image_path(page)
+      begin
+        page.css('.article-content img').first().attribute('src').value
+      rescue => e
+        ""
+      end
+    end
 
 	end
 

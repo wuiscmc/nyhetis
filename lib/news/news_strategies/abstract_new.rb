@@ -4,17 +4,18 @@ module New
 
 		attr_accessor :relevance
 
-		attr_accessor :url, :text, :heading, :body, :date
+		attr_accessor :url, :text, :heading, :body, :date, :image
 
 		def initialize(attributes = {})
-			attributes = {id: nil, relevance: false, text: "", heading: "", body: ""}.merge(attributes)
+			attributes = {id: nil, relevance: false, text: "", url: "", heading: "", body: "", image: ""}.merge(attributes)
 			@id = attributes[:id]
-			@url = attributes[:url]
+			@url = attributes[:url].split("?")[0]
 			@body = attributes[:body]
 			@relevance = attributes[:relevance]
 			@text = attributes[:text]
 			@heading = attributes[:heading]
 			@date = attributes[:date]
+			@image = attributes[:image]
 			parse_content()
 		end
 
@@ -43,7 +44,22 @@ module New
 		end
 
 		def to_json(*args)
-			{url: url, heading: heading, content: text, source: source, date: date}.to_json
+			attributes.to_json
+		end
+
+		def date_published
+			return nil if @date.nil? 
+			if @date.nil?  || (@date.is_a?(String) && @date.empty?)
+				return nil
+			elsif @date.is_a?(String)
+				return Date.parse(@date)
+			else
+				return date.to_date
+			end
+		end
+
+		def attributes
+			{url: url, heading: heading, content: text, body: text, text: text, source: source, date: date, relevance: relevance, image: image}
 		end
 
 	end

@@ -1,5 +1,5 @@
 PATH
-  remote: ../pfc/cobweb
+  remote: vendor/cobweb
   specs:
     cobweb (1.0.18)
       addressable
@@ -67,6 +67,7 @@ GEM
       method_source (~> 0.8)
       slop (~> 3.4)
     rack (1.5.2)
+    rack-cors (0.2.9)
     rack-protection (1.5.1)
       rack
     rack-test (0.6.2)
@@ -127,6 +128,7 @@ DEPENDENCIES
   fuubar
   nokogiri
   pry
+  rack-cors
   rake
   redis
   redis-namespace

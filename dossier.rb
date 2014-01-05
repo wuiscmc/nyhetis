@@ -1,4 +1,7 @@
 require "bundler/setup"
+require 'bigdecimal'
+require 'bigdecimal/util'
+
 Bundler.require(:default)
 #Encoding.default_internal = 'UTF-8' 
 
